@@ -1,7 +1,0 @@
-<IfModule mod_rewrite.c>
-  RewriteEngine on
-
-  RewriteRule ^ad?$ ad.php [NC,L]
-</IfModule>
-
-RewriteRule ^search?$ search.html [NC,L]
