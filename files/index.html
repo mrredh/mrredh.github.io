@@ -39,7 +39,7 @@
         <br>
 
         <div class="col l12 m12 s12">
-          <div class="card horizontal">
+          <div class="card horizontal hcard1">
             <div class="card-image">
               <img width="120" height="120" src="../images/filemusic.jpg">
               <a id="playmusic" class="playmusic" onclick="Materialize.toast($1MusicPlayed, 60000);"><i class="material-icons">play_arrow</i></a>
@@ -49,7 +49,7 @@
                 <div class="row">
                   <div class="col l9 m12 s12">
                     <h4>Windows error sound Remix</h4>
-                    <h5>Из видео "<a href="https://www.youtube.com/watch?v=uVCLhajaOOY&t=87s">Как создать простую игру в POWER POINT</a>"</h5>
+                    <h5>Из видео "<a href="https://www.youtube.com/watch?v=uVCLhajaOOY&t=87s" target="_blank">Как создать простую игру в POWER POINT</a>"</h5>
                   </div>
                   <div class="col l3 m12 s12">
                     <br>
@@ -60,11 +60,67 @@
             </div>
           </div>
         </div>
+        <br>
+        <div class="col l12 m12 s12">
+          <div class="card horizontal hcard2">
+            <div class="card-image">
+              <img width="120" height="120" src="../images/filemusic.jpg">
+              <a id="playmusic2" class="playmusic" onclick="Materialize.toast($2MusicPlayed, 60000);"><i class="material-icons">play_arrow</i></a>
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <div class="row">
+                  <div class="col l9 m12 s12">
+                    <h4>Klm Music - Dance Energy</h4>
+                    <h5>Из видео "<a href="https://www.youtube.com/watch?v=1IEXargeo2c" target="_blank">4K Интро 60 FPS</a>"</h5>
+                  </div>
+                  <div class="col l3 m12 s12">
+                    <br>
+                    <a class="btn hiddendownload" href="../allfiles/Klm Music - Dance Energy.zip" onclick="Materialize.toast('Скачивается ZIP АРХИВ.', 5000)">Скачать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <br>
+        <div class="col l12 m12 s12">
+          <div class="card horizontal hcard3">
+            <div class="card-image">
+              <img width="120" height="120" src="../images/filemusic.jpg">
+              <a id="playmusic3" class="playmusic" onclick="Materialize.toast($3MusicPlayed, 60000);"><i class="material-icons">play_arrow</i></a>
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <div class="row">
+                  <div class="col l9 m12 s12">
+                    <h4>No Copyright Music</h4>
+                    <h5>Из видео "<a href="https://www.youtube.com/watch?v=vtwq9N2Kf8M&t=53s" target="_blank">Как убрать “F1“ при включении компьютера?</a>"</h5>
+                  </div>
+                  <div class="col l3 m12 s12">
+                    <br>
+                    <a class="btn hiddendownload" href="../allfiles/No Copyright Music.zip" onclick="Materialize.toast('Скачивается ZIP АРХИВ.', 5000)">Скачать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
 
-        <div id="musiccontrols" class="1musicplay">
+        <div id="musiccontrols" class="musicplay">
           <a onclick="$('#musiccontrols').toggle(); Materialize.Toast.removeAll();" class="btn-flat right" style="margin-left: 15px;"><i class="material-icons">close</i></a>
           <audio src="../allfiles/Windows error sound Remix.mp3" controls></audio>
+        </div>
+
+        <div id="musiccontrols2" class="musicplay">
+          <a onclick="$('#musiccontrols2').toggle(); Materialize.Toast.removeAll();" class="btn-flat right" style="margin-left: 15px;"><i class="material-icons">close</i></a>
+          <audio src="../allfiles/Klm Music - Dance Energy.mp3" controls></audio>
+        </div>
+
+        <div id="musiccontrols3" class="musicplay">
+          <a onclick="$('#musiccontrols3').toggle(); Materialize.Toast.removeAll();" class="btn-flat right" style="margin-left: 15px;"><i class="material-icons">close</i></a>
+          <audio src="../allfiles/No Copyright Music.mp3" controls></audio>
         </div>
       </div>
 
@@ -82,6 +138,20 @@
                   e.stopPropagation();
               });
 
+              $('a#playmusic2').click(function (e) {
+                  $(this).toggleClass('active');
+                  $('#musiccontrols2').toggle();
+
+                  e.stopPropagation();
+              });
+
+              $('a#playmusic3').click(function (e) {
+                  $(this).toggleClass('active');
+                  $('#musiccontrols3').toggle();
+
+                  e.stopPropagation();
+              });
+
               $('body').click(function () {
                   var link = $('a#link1');
                   if (link.hasClass('active')) {
@@ -90,10 +160,16 @@
               });
           });
 
+
+
           var $1MusicPlayed = $('<p>Играет "Windows error sound Remix.mp3"</p>').add($('<a onclick="Materialize.Toast.removeAll();" class="btn-flat"><i class="material-icons">close</i></a>'));
 
-          $( ".1musicplay" ).draggable({
-            addClasses: false
+          var $2MusicPlayed = $('<p>Играет "Klm Music - Dance Energy.mp3"</p>').add($('<a onclick="Materialize.Toast.removeAll();" class="btn-flat"><i class="material-icons">close</i></a>'));
+
+          var $3MusicPlayed = $('<p>Играет "No Copyright Music.mp3"</p>').add($('<a onclick="Materialize.Toast.removeAll();" class="btn-flat"><i class="material-icons">close</i></a>'));
+
+          $( ".musicplay" ).draggable({
+            scroll: false
           });
       </script>
     </body>
