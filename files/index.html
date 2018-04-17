@@ -17,14 +17,14 @@
           <div class="nav-wrapper">
             <div class="container">
               <a href="#!" class="brand-logo">
-                <img src="https://lh3.googleusercontent.com/-1mgzMyVtHlI/VOHM3LUdwFI/AAAAAAAAFRs/OiKtCwEBES4B7rfZeseSkhWHufRp-xGswCEwYBhgL/w139-h139-p/13683016621331620877horror-icon-md.png">
+                <img src="../images/logo.png">
               </a>
               <ul class="right hide-on-med-and-down">
-                <li><a href="../siteconcept/">Главная</a></li>
-                <li><a href="../siteconcept/">Видео</a></li>
-                <li><a href="../siteconcept/">Новости</a></li>
+                <li><a href="../siteconcept">Главная</a></li>
+                <li><a href="../siteconcept">Видео</a></li>
+                <li><a href="../siteconcept">Новости</a></li>
                 <li class="active"><a href="#!">Файлы</a></li>
-                <li><a href="../siteconcept/">О канале</a></li>
+                <li><a href="../siteconcept">О канале</a></li>
               </ul>
             </div>
           </div>
@@ -41,6 +41,7 @@
           <div class="card horizontal">
             <div class="card-image">
               <img width="120" height="120" src="../images/filemusic.jpg">
+              <a href="#" id="playmusic" class="playmusic"><i class="material-icons">play_arrow</i></a>
             </div>
             <div class="card-stacked">
               <div class="card-content">
@@ -59,11 +60,31 @@
           </div>
         </div>
 
+
+        <div id="musiccontrols" style="display: none;"><audio src="../allfiles/Windows error sound Remix.mp3" controls></audio></div>
       </div>
 
 
       <!--Import jQuery before materialize.js-->
       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
       <script type="text/javascript" src="../js/materialize.js"></script>
+      <script>
+          $(document).ready(function () {
+              $('a#playmusic').click(function (e) {
+                  $(this).toggleClass('active');
+                  $('#musiccontrols').toggle();
+
+                  e.stopPropagation();
+              });
+
+              $('body').click(function () {
+                  var link = $('a#link1');
+                  if (link.hasClass('active')) {
+                      link.click();
+                  }
+              });
+          });
+
+      </script>
     </body>
   </html>
