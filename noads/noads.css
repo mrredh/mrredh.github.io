@@ -91,5 +91,7 @@ div[style="clear: both; width: 600px; margin: auto; display: block;"] {
 }
 
 ntvk {
-	display: none;
+      	position: absolute;
+      	bottom: -12%;
+      	opacity: 0;
 }
