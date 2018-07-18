@@ -484,12 +484,16 @@ var loggingConfig = {
 
   </head>
   <style>
+    body {
+      background-color: #fff;
+    }
+
     #react {
       display: none;
     }
     .videobox i {
       font-size: 520px;
-      color: #fff;
+      color: #ef9a9a;
     }
     .btns {
       position: absolute;
@@ -498,11 +502,11 @@ var loggingConfig = {
     }
     .btns a i {
       font-size: 70px;
-      color: #f44336;
+      color: #ef9a9a;
       transform: rotate(135deg);
     }
   </style>
-  <body>
+  <body style="background-color: #fff;">
     <div id="react"></div>
     <br><br>
     <div class="videobox center">
@@ -511,5 +515,11 @@ var loggingConfig = {
     <div class="btns">
       <a onclick="javascript:history.back(); return false;" style="cursor: pointer;"><i class="material-icons">phone</i></a>
     </div>
+
+    <script type="text/javascript">
+      $('.videocll').click(function () {
+        $('#react').css('display', 'block');
+      });
+    </script>
   </body>
 </html>
