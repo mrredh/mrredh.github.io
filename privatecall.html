@@ -173,12 +173,12 @@
     //deprecated desktop sharing settings, included only because older version of jitsi-meet require them
     desktopSharing: 'ext', // Desktop sharing method. Can be set to 'ext', 'webrtc' or false to disable.
     chromeExtensionId: 'kglhbbefdnlheedjiejgomgmfplipfeb', // Id of desktop streamer Chrome extension
-    desktopSharingSources: ['screen', 'window'],
+    //desktopSharingSources: ['screen', 'window'],
     googleApiApplicationClientID: "39065779381-bbhnkrgibtf4p0j9ne5vsq7bm49t1tlf.apps.googleusercontent.com",
     //new desktop sharing settings
     desktopSharingChromeExtId: 'kglhbbefdnlheedjiejgomgmfplipfeb', // Id of desktop streamer Chrome extension
     desktopSharingChromeDisabled: false,
-    desktopSharingChromeSources: ['screen', 'window', 'tab'],
+    //desktopSharingChromeSources: ['screen', 'window', 'tab'],
     desktopSharingChromeMinExtVersion: '0.2.6.2', // Required version of Chrome extension
     desktopSharingFirefoxExtId: "",
     desktopSharingFirefoxDisabled: false,
@@ -196,7 +196,7 @@
     useRtcpMux: true,
     useBundle: true,
     disableSuspendVideo: true,
-    stereo: false,
+    stereo: true,
     forceJVB121Ratio:  -1,
     enableTalkWhileMuted: true,
     enableClosePage: true,
@@ -289,10 +289,7 @@ var interfaceConfig = {
      * jwt.
      */
     TOOLBAR_BUTTONS: [
-        'microphone', 'camera', 'desktop', 'fullscreen', 'fodeviceselection', 'hangup',
-        'profile', 'info', 'chat', 'recording', 'livestreaming', 'etherpad',
-        'sharedvideo', 'settings', 'raisehand', 'videoquality', 'filmstrip',
-        'invite', 'feedback', 'stats', 'shortcuts'
+        'microphone'
     ],
     SETTINGS_SECTIONS: [ 'language', 'devices', 'moderator' ],
     // Determines how the video would fit the screen. 'both' would fit the whole
@@ -338,7 +335,7 @@ var interfaceConfig = {
      *
      * @type {boolean}
      */
-    MOBILE_APP_PROMO: true,
+    MOBILE_APP_PROMO: false,
     /**
      * Maximum coeficient of the ratio of the large video to the visible area
      * after the large video is scaled to fit the window.
@@ -484,41 +481,70 @@ var loggingConfig = {
 
   </head>
   <style>
-    body {
-      background-color: #fff;
-    }
-
-    #react {
+    .react {
       display: none;
     }
     .videobox i {
       font-size: 520px;
       color: #ef9a9a;
+      cursor: pointer;
     }
     .btns {
       position: absolute;
       bottom: 45px;
       left: 47%;
+      z-index: 999;
     }
     .btns a i {
       font-size: 70px;
       color: #ef9a9a;
       transform: rotate(135deg);
     }
+
+    .new-toolbox {
+      visibility: hidden;
+    }
+
+    .byiuGy {
+      visibility: hidden;
+    }
+
+    .filmstrip {
+      opacity: 0;
+      position: absolute;
+      right: -30%;
+    }
+
+    .large-video-labels {
+      visibility: hidden;
+    }
+
+    #dominantSpeaker {
+      opacity: 0;
+    }
   </style>
   <body style="background-color: #fff;">
-    <div id="react"></div>
-    <br><br>
-    <div class="videobox center">
-      <i class="material-icons">person_outline</i>
-    </div>
     <div class="btns">
-      <a onclick="javascript:history.back(); return false;" style="cursor: pointer;"><i class="material-icons">phone</i></a>
+      <a onclick="javascript:history.back(); return false;" style="cursor: pointer;"><i style="color: #e53935;" class="material-icons">phone</i></a>
+    </div>
+    <div class="react">
+      <div id="react"></div>
+    </div>
+    <div class="audio">
+      <br><br>
+      <div class="videobox center">
+        <i class="material-icons">person_outline</i>
+      </div>
+      <div class="btns">
+        <a onclick="javascript:history.back(); return false;" style="cursor: pointer;"><i class="material-icons">phone</i></a>
+      </div>
     </div>
 
+
     <script type="text/javascript">
-      $('.videocll').click(function () {
-        $('#react').css('display', 'block');
+      $('.videobox').click(function () {
+        $('.react').css('display', 'block');
+        $('.audio').css('display', 'none');
       });
     </script>
   </body>
