@@ -90,11 +90,6 @@ div[style="clear: both; width: 600px; margin: auto; display: block;"] {
 	display: none;
 }
 
-ntvk {
-      	position: absolute;
-      	bottom: -12%;
-      	opacity: 0;
-}
 
 div[style="margin: auto;text-align: center;"] {
 	opacity: 0;
@@ -108,4 +103,10 @@ ntvk {
 	position: absolute;
    	bottom: 20px;
    	z-index: -2;
+}
+
+.apester-media, .apester-element {
+  	position: absolute;
+	opacity: 0;
+  	z-index: -2;
 }
