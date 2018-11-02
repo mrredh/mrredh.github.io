@@ -1,1 +1,1 @@
-$('#nativeroll_video_cont').hide()
+$('#nativeroll_video_cont').remove()
