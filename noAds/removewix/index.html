@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>noAds - Wix</title>
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <div class="container">
+            <a class="brand-logo" id="homePg">noAds</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li class="active"><a id="wixPg">Wix</a></li>
+              <li><a id="ucozPg">Ucoz</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <br><br>
+    <div class="container">
+      <form class="sitesForm form-in">
+        <div class="row">
+          <div class="input-field col l10 m9 s7">
+            <input id="adress_site" type="text" class="siteAdress validate" required oninvalid="this.setCustomValidity('Введите адрес вашего сайта')" oninput="setCustomValidity('')" autocomplete="off">
+            <label for="adress_site">Адрес сайта</label>
+          </div>
+          <div class="col l2 m3 s5">
+            <a class="btn-flat srchSite center wixPnl">Выбрать сайт</a>
+          </div>
+        </div>
+        <br>
+        <div class="input-field">
+          <input id="name_site" type="text" class="siteName validate" required oninvalid="this.setCustomValidity('И не забудте про название!')" oninput="setCustomValidity('')" autocomplete="off">
+          <label for="name_site">Название сайта</label>
+        </div>
+        <p class="myP2">Прелоадер:</p>
+        <span>
+          <input class="with-gap" name="preload1" type="radio" id="preloaderDflt">
+          <label for="preloaderDflt">Стандартный</label>
+        </span>
+        <span class="mr10">
+          <input class="with-gap" name="preload1" type="radio" id="preloaderLine">
+          <label for="preloaderLine">Прогресс</label>
+        </span>
+        <br><br>
+        <center><input type="submit" class="result myBtn" value="Сгенерировать код"></center>
+      </form>
+      <br><br>
+      <p class="siteReads myP">Вставьте содержимое в файл <span class="tag lft">index</span><span class="tag rgt">.html</span>, на вашем хостинге.</p>
+      <div class="resultBlock">
+        <div class="siteRes" id="resultSite">
+          <span><</span>!DOCTYPE html<span>></span><br>
+          <span><</span>html<span>></span><br>
+          <span class="mr10"><</span>head<span>></span><br>
+          <span class="mr20"><</span>link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons"<span>></span><br>
+          <span class="mr20"><</span>link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css"<span>></span><br>
+          <span class="mr20"><</span>title<span>></span><span class="sitenm"></span><span><</span>/title<span>></span><br>
+          <span class="mr10"><</span>/head<span>></span><br>
+          <span class="mr10"><</span>style<span>></span><br>
+          <span class="mr20">body {</span><br>
+          <span class="mr30">margin: 0;</span><br>
+          <span class="mr30">padding: 0;</span><br>
+          <span class="mr30">overflow: hidden;</span><br>
+          <span class="mr20">}</span><br><br>
+          <span class="mr20">iframe {</span><br>
+          <div class="oPreloader">
+            <span class="mr30">opacity: 0;</span>
+          </div>
+          <div class="tPreloader">
+            <span class="mr30">opacity: 0;</span>
+          </div>
+          <span class="mr30">position: absolute;</span><br>
+          <span class="mr30">top: -5.2%;</span><br>
+          <span class="mr30">width: 102%;</span><br>
+          <span class="mr30">height: 107%;</span><br>
+          <span class="mr30">border: 0;</span><br>
+          <div class="oPreloader">
+            <span class="mr30">animation: load 0.4s ease 2s forwards;</span>
+          </div>
+          <div class="tPreloader">
+            <span class="mr30">animation: load 0.4s ease 2s forwards;</span>
+          </div>
+          <span class="mr30">z-index: 3000000000;</span><br>
+          <span class="mr20">}</span><br><br>
+          <div class="oPreloader">
+            <span class="mr20">.preload {</span><br>
+            <span class="mr30">position: absolute;</span><br>
+            <span class="mr30">top: 0;</span><br>
+            <span class="mr30">width: 100%;</span><br>
+            <span class="mr30">height: 100%;</span><br>
+            <span class="mr30">overflow: hidden;</span><br>
+            <span class="mr30">animation: loadout 0.4s ease 1.7s forwards;</span><br>
+            <span class="mr20">}</span><br><br>
+            <span class="mr20">.aIn {</span><br>
+            <span class="mr30">opacity: 0;</span><br>
+            <span class="mr30">position: absolute;</span><br>
+            <span class="mr30">top: 0;</span><br>
+            <span class="mr30">width: 100%;</span><br>
+            <span class="mr30">height: 100%;</span><br>
+            <span class="mr30">overflow: hidden;</span><br>
+            <span class="mr30">animation: load2 0.4s ease 0.4s forwards;</span><br>
+            <span class="mr20">}</span><br><br>
+            <span class="mr20">.preload .centeredPrel {</span><br>
+            <span class="mr30">position: absolute;</span><br>
+            <span class="mr30">top: 50%;</span><br>
+            <span class="mr30">left: 50%;</span><br>
+            <span class="mr30">transform: translate(-50%, -50%);</span><br>
+            <span class="mr20">}</span><br><br>
+            <span class="mr20">.spinner-layer {</span><br>
+            <span class="mr30">border-color: #000;</span><br>
+            <span class="mr20">}</span><br><br>
+            <span class="mr20">.circle-clipper .circle {</span><br>
+            <span class="mr30">border-width: 4px;</span><br>
+            <span class="mr20">}</span><br><br>
+            <span class="mr20">@keyframes load {</span><br>
+            <span class="mr30">0% {</span><br>
+            <span class="mr40">opacity: 0;</span><br>
+            <span class="mr30">}</span><br>
+            <span class="mr30">100% {</span><br>
+            <span class="mr40">opacity: 1;</span><br>
+            <span class="mr30">}</span><br>
+            <span class="mr20">}</span><br><br>
+            <span class="mr20">@keyframes load2 {</span><br>
+            <span class="mr30">0% {</span><br>
+            <span class="mr40">opacity: 0;</span><br>
+            <span class="mr40">transform: scale(0.6);</span><br>
+            <span class="mr30">}</span><br>
+            <span class="mr30">100% {</span><br>
+            <span class="mr40">opacity: 1;</span><br>
+            <span class="mr40">transform: scale(1);</span><br>
+            <span class="mr30">}</span><br>
+            <span class="mr20">}</span><br><br>
+            <span class="mr20">@keyframes loadout {</span><br>
+            <span class="mr30">0% {</span><br>
+            <span class="mr40">opacity: 1;</span><br>
+            <span class="mr40">transform: scale(1);</span><br>
+            <span class="mr30">}</span><br>
+            <span class="mr30">100% {</span><br>
+            <span class="mr40">opacity: 0;</span><br>
+            <span class="mr40">transform: scale(0.6);</span><br>
+            <span class="mr30">}</span><br>
+            <span class="mr20">}</span><br>
+          </div>
+          <div class="tPreloader">
+            <span class="mr20">.progress {</span><br>
+            <span class="mr30">position: relative;</span><br>
+            <span class="mr30">height: 6px;</span><br>
+            <span class="mr30">display: block;</span><br>
+            <span class="mr30">width: 100%;</span><br>
+            <span class="mr30">background-color: #b3b3b3;</span><br>
+            <span class="mr30">border-radius: 5px;</span><br>
+            <span class="mr30">margin: 0;</span><br>
+            <span class="mr30">overflow: hidden;</span><br>
+            <span class="mr30">animation: loadout 0.4s ease 1.7s forwards;</span><br>
+            <span class="mr20">}</span><br><br>
+            <span class="mr20">.progress .indeterminate {</span><br>
+            <span class="mr30">background-color: #000;</span><br>
+            <span class="mr20">}</span><br><br>
+            <span class="mr20">@keyframes load {</span><br>
+            <span class="mr30">0% {</span><br>
+            <span class="mr40">opacity: 0;</span><br>
+            <span class="mr30">}</span><br>
+            <span class="mr30">100% {</span><br>
+            <span class="mr40">opacity: 1;</span><br>
+            <span class="mr30">}</span><br>
+            <span class="mr20">}</span><br><br>
+            <span class="mr20">@keyframes loadout {</span><br>
+            <span class="mr30">0% {</span><br>
+            <span class="mr40">opacity: 1;</span><br>
+            <span class="mr30">}</span><br>
+            <span class="mr30">100% {</span><br>
+            <span class="mr40">opacity: 0;</span><br>
+            <span class="mr30">}</span><br>
+            <span class="mr20">}</span><br>
+          </div>
+          <span class="mr10"><</span>/style<span>></span><br>
+          <span class="mr10"><</span>body<span>></span><br>
+          <div class="oPreloader">
+            <span class="mr20"><</span><span>div class="preload"</span><span>></span><br>
+            <span class="mr30"><</span><span>div class="aIn"</span><span>></span><br>
+            <span class="mr40"><</span><span>div class="centeredPrel"</span><span>></span><br>
+            <span class="mr50"><</span><span>div class="preloader-wrapper big active"</span><span>></span><br>
+            <span class="mr60"><</span><span>div class="spinner-layer"</span><span>></span><br>
+            <span class="mr70"><</span><span>div class="circle-clipper left"</span><span>></span><span><</span><span>div class="circle"</span><span>></span><span><</span><span>/div></span><span><</span><span>/div></span><br>
+            <span class="mr70"><</span><span>div class="gap-patch"</span><span>></span><span><</span><span>div class="circle"</span><span>></span><span><</span><span>/div></span><span><</span><span>/div></span><br>
+            <span class="mr70"><</span><span>div class="circle-clipper right"</span><span>></span><span><</span><span>div class="circle"</span><span>></span><span><</span><span>/div></span><span><</span><span>/div></span><br>
+            <span class="mr60"><</span><span>/div</span><span>></span><br>
+            <span class="mr50"><</span><span>/div</span><span>></span><br>
+            <span class="mr40"><</span><span>/div</span><span>></span><br>
+            <span class="mr30"><</span><span>/div</span><span>></span><br>
+            <span class="mr20"><</span><span>/div</span><span>></span><br>
+          </div>
+          <div class="tPreloader">
+            <span class="mr20"><</span><span>div class="progress"</span><span>></span><br>
+            <span class="mr30"><</span><span>div class="indeterminate"</span><span>></span><span><</span><span>/div</span><span>></span><br>
+            <span class="mr20"><</span><span>/div</span><span>></span><br>
+          </div>
+          <span class="mr20"><</span>iframe name="content" src="<span class="siteadr"></span>"<span>></span><br><br>
+          <span class="mr20"><</span>script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"<span>></span><span><</span>/script<span>></span><br>
+          <span class="mr20"><</span>script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"<span>></span><span><</span>/script<span>></span><br>
+          <span class="mr10"><</span>/body<span>></span><br>
+          <span><</span>/html<span>></span><br>
+        </div>
+        <div class="copied">
+          <span>Скопированно!</span>
+        </div>
+      </div>
+    </div>
+    <br><br>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../script/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+    <link rel="stylesheet" href="../styles/style.css">
+    <title>noAds - Wix</title>
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <div class="container">
+            <a class="brand-logo" id="homePg">noAds</a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a id="wixPg">Wix</a></li>
+              <li class="active"><a id="ucozPg">Ucoz</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <br><br>
+    <div class="container">
+      <form class="resultUcoz form-in">
+        <center><input type="submit" class="myBtn form-in-nFrw" value="Показать код"></center>
+      </form>
+      <br><br>
+      <p class="siteReads myP">Вствьте после закрывающего тэга <span class="tag lft"><</span><span class="tag rgt">/head></span></p>
+      <div class="resultBlock">
+        <div class="siteRes" id="resultSite">
+          <span><</span>link rel="stylesheet" href="https://mrredh.github.io/noads/noads.css"<span>></span><br>
+          <span><</span>script type="text/javascript" src="https://mrredh.github.io/noads/noads.js"<span>></span><span><</span>/script<span>></span>
+        </div>
+      </div>
+      <br><br>
+      <p class="siteReads myP">Вствьте вместо оператора <span class="tag lft">$</span><span class="tag rgt">POWERED_BY$</span> , в <a class="uLink">ГЛОБАЛЬНОМ БЛОКЕ "Нижняя часть сайта"</a></p>
+      <div class="resultBlock" id="resultBlock2">
+        <div class="siteRes" id="resultSite2">
+          <span><</span>div style="display: none;"<span>></span><br>
+          <span class="mr10">$POWERED_BY$</span><br>
+          <span><</span>/div<span>></span><br>
+        </div>
+      </div>
+    </div>
+    <br><br>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../script/main.js"></script>
+  </body>
+</html>
