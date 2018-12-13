@@ -97,6 +97,9 @@ $('#ucozPg2').click(function() {
   location.href = 'removeucoz';
 });
 
+$('.wixPnl').click(function() {
+  window.open('https://wix.com');
+});
 
 $(window).on('scroll', function() {
   if ($(window).scrollTop()) {
