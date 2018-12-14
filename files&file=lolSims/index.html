@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import Google Icon Font-->
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="../css/materialize.css"  media="screen,projection"/>
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>lolSims - Mr RED Hoibin</title>
+    </head>
+    <body>
+      <div class="navbar-fixed">
+        <nav>
+          <div class="nav-wrapper">
+            <div class="container">
+              <a href="../index.html" class="brand-logo">
+                <img src="https://lh3.googleusercontent.com/-1mgzMyVtHlI/VOHM3LUdwFI/AAAAAAAAFRs/OiKtCwEBES4B7rfZeseSkhWHufRp-xGswCEwYBhgL/w139-h139-p/13683016621331620877horror-icon-md.png">
+              </a>
+              <ul class="right hide-on-med-and-down">
+                <li><a href="../siteconcept">Главная</a></li>
+                <li><a href="../siteconcept">Видео</a></li>
+                <li><a href="../siteconcept">Новости</a></li>
+                <li class="active"><a href="../files">Файлы</a></li>
+                <li><a href="../siteconcept">О канале</a></li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+      </div>
+
+      <br>
+      <div class="container">
+        <h2 class="files-h2">Файлы</h2>
+        <hr style="opacity: 0; float: left; margin-top: 0; width: 18%; border: 0.45px solid #c70000; animation: hrfiles 0.6s ease 1s forwards;">
+        <br>
+
+        <div class="col l12 m12 s12">
+          <div class="card horizontal hcard3">
+            <div class="card-image">
+              <img width="120" height="120" src="../images/filedocument.jpg">
+              <a id="viewdocument1" class="documentview"><i class="material-icons">pageview</i></a>
+            </div>
+            <div class="card-stacked">
+              <div class="card-content">
+                <div class="row">
+                  <div class="col l9 m12 s12">
+                    <h4>lolSims</h4>
+                    <h5>lolsims.html</h5>
+                  </div>
+                  <div class="col l3 m12 s12">
+                    <br>
+                    <a class="btn hiddendownload" href="../allfiles/sims.zip" onclick="Materialize.toast('Скачивается ZIP АРХИВ.', 2000)">Скачать</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+
+        <div id="musiccontrols" class="musicplay">
+          <a onclick="$('#musiccontrols').toggle(); Materialize.Toast.removeAll(); musiccontrols.detach();" class="btn-flat right" style="margin-left: 15px;"><i class="material-icons">close</i></a>
+          <audio src="../allfiles/Windows error sound Remix.mp3" controls></audio>
+        </div>
+
+        <div id="musiccontrols2" class="musicplay">
+          <a onclick="$('#musiccontrols2').toggle(); Materialize.Toast.removeAll(); musiccontrols2.detach();" class="btn-flat right" style="margin-left: 15px;"><i class="material-icons">close</i></a>
+          <audio src="../allfiles/Klm Music - Dance Energy.mp3" controls></audio>
+        </div>
+
+        <div id="musiccontrols3" class="musicplay">
+          <a onclick="$('#musiccontrols3').toggle(); Materialize.Toast.removeAll(); musiccontrols3.detach();" class="btn-flat right" style="margin-left: 15px;"><i class="material-icons">close</i></a>
+          <audio src="../allfiles/No Copyright Music.mp3" controls></audio>
+        </div>
+      </div>
+
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    	<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+      <script type="text/javascript" src="../js/materialize.js"></script>
+      <script>
+          $(document).ready(function () {
+              $('a#playmusic').click(function (e) {
+                  $(this).toggleClass('active');
+                  $('#musiccontrols').toggle();
+
+                  e.stopPropagation();
+              });
+
+              $('a#playmusic2').click(function (e) {
+                  $(this).toggleClass('active');
+                  $('#musiccontrols2').toggle();
+
+                  e.stopPropagation();
+              });
+
+              $('a#playmusic3').click(function (e) {
+                  $(this).toggleClass('active');
+                  $('#musiccontrols3').toggle();
+
+                  e.stopPropagation();
+              });
+
+              $('body').click(function () {
+                  var link = $('a#link1');
+                  if (link.hasClass('active')) {
+                      link.click();
+                  }
+              });
+          });
+
+          $('#viewdocument1').click(function() {
+            window.open('../allfiles/sims.html');
+          });
+
+          var musiccontrols = jQuery('#musiccontrols');
+          var musiccontrols2 = jQuery('#musiccontrols2');
+          var musiccontrols3 = jQuery('#musiccontrols3');
+
+          function addtest() {
+            $("<div/>", {
+              "class": "musicplay",
+              "id": "musicplay",
+              text: "",
+              click: function(){
+                  $(this).html('Спасибо.');
+              }
+              }).appendTo("body");
+          }
+
+
+          var $1MusicPlayed = $('<p>Играет "Windows error sound Remix.mp3"</p>').add($('<a onclick="Materialize.Toast.removeAll();" class="btn-flat"><i class="material-icons">close</i></a>'));
+
+          var $2MusicPlayed = $('<p>Играет "Klm Music - Dance Energy.mp3"</p>').add($('<a onclick="Materialize.Toast.removeAll();" class="btn-flat"><i class="material-icons">close</i></a>'));
+
+          var $3MusicPlayed = $('<p>Играет "No Copyright Music.mp3"</p>').add($('<a onclick="Materialize.Toast.removeAll();" class="btn-flat"><i class="material-icons">close</i></a>'));
+
+          $( ".musicplay" ).draggable({
+            scroll: false
+          });
+      </script>
+    </body>
+  </html>
