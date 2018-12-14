@@ -4514,22 +4514,22 @@ html {
   color: #7b899c;
   font-size: 67px;
   font-weight: 200;
+  animation: files-h2 0.6s ease ;
 }
-
-/*animation: files-h2 0.6s ease;
 
 @keyframes files-h2 {
   0% {
     opacity: 0;
-    margin-left: -32px;
+    position: absolute;
+    left: 290px;
   }
 
   100% {
     opacity: 1;
-    margin-left: 0;
+    position: absolute;
+    left: 320px;
   }
 }
-*/
 
 @keyframes hrfiles {
     0% {
@@ -4867,6 +4867,18 @@ small {
   animation: hiddendownloadout 0.4s;
 }
 
+.documentview i {
+  display: block;
+  opacity: 0;
+  font-size: 75px;
+  color: #d8d8d8;
+  position: absolute;
+  bottom: 20px;
+  left: 37px;
+  transition: all 0.4s;
+  cursor: pointer;
+}
+
 .playmusic i {
   display: block;
   opacity: 0;
@@ -4888,7 +4900,7 @@ small {
   border-radius: 4px;
   display: none;
   width: 300px;
-  height: 92px;
+  height: 68px;
   overflow: hidden;
   background-color: #e53935;
   cursor: move;
@@ -4921,6 +4933,11 @@ small {
   }
 }
 
+.card-image:hover .documentview i {
+  opacity: 1;
+  bottom: 30px;
+}
+
 .card-image:hover .playmusic i {
   opacity: 1;
   bottom: 30px;
@@ -4928,7 +4945,7 @@ small {
 
 .card.horizontal:hover .hiddendownload {
   opacity: 1;
-  animation: hiddendownload 0.5s ease ;
+  animation: hiddendownload 0.5s ease;
 }
 
 @keyframes hiddendownload {
@@ -8557,19 +8574,10 @@ input[type=range]:focus::-ms-fill-upper {
   visibility: visible;
   -webkit-animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
           animation: pulse-animation 1s cubic-bezier(0.24, 0, 0.38, 1) infinite;
-  -webkit-transition: opacity .3s,
- visibility 0s 1s,
- -webkit-transform .3s;
-  transition: opacity .3s,
- visibility 0s 1s,
- -webkit-transform .3s;
-  transition: opacity .3s,
- transform .3s,
- visibility 0s 1s;
-  transition: opacity .3s,
- transform .3s,
- visibility 0s 1s,
- -webkit-transform .3s;
+  -webkit-transition: opacity .3s, visibility 0s 1s, -webkit-transform .3s;
+  transition: opacity .3s, visibility 0s 1s, -webkit-transform .3s;
+  transition: opacity .3s, transform .3s, visibility 0s 1s;
+  transition: opacity .3s, transform .3s, visibility 0s 1s, -webkit-transform .3s;
 }
 
 .tap-target {
@@ -8622,19 +8630,10 @@ input[type=range]:focus::-ms-fill-upper {
 
 .tap-target-wave::after {
   visibility: hidden;
-  -webkit-transition: opacity .3s,
- visibility 0s,
- -webkit-transform .3s;
-  transition: opacity .3s,
- visibility 0s,
- -webkit-transform .3s;
-  transition: opacity .3s,
- transform .3s,
- visibility 0s;
-  transition: opacity .3s,
- transform .3s,
- visibility 0s,
- -webkit-transform .3s;
+  -webkit-transition: opacity .3s, visibility 0s, -webkit-transform .3s;
+  transition: opacity .3s, visibility 0s, -webkit-transform .3s;
+  transition: opacity .3s, transform .3s, visibility 0s;
+  transition: opacity .3s, transform .3s, visibility 0s, -webkit-transform .3s;
   z-index: -1;
 }
 
