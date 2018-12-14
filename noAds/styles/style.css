@@ -74,9 +74,10 @@ nav ul li.active {
 .resultBlock .copied {
   opacity: 0;
   padding: 19px;
-  position: absolute;
-  top: 80%;
-  left: 45%;
+  position: fixed;
+  top: 550px;
+  left: 50%;
+  margin-left: -100px;
   font-size: 22px;
   font-weight: 200;
   color: #222;
