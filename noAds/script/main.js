@@ -39,15 +39,15 @@ function selectText(elementId) {
 $('#resultSite').click(function() {
   selectText(this.id);
   document.execCommand('copy');
-  $('.siteRes').css('filter', 'blur(5px)');
+  $('.siteRes#resultSite').css('filter', 'blur(5px)');
   $('.resultBlock .copied').css('opacity', '1');
   $('.resultBlock .copied').css('transform', 'scale(1)');
-  $('.siteRes').css('opacity', '0.55');
+  $('.siteRes#resultSite').css('opacity', '0.55');
   setTimeout(function () {
     $('.resultBlock .copied').css('opacity', '');
     $('.resultBlock .copied').css('transform', 'scale(0.7)');
-    $('.siteRes').css('opacity', '');
-    $('.siteRes').css('filter', 'blur(0)');
+    $('.siteRes#resultSite').css('opacity', '');
+    $('.siteRes#resultSite').css('filter', 'blur(0)');
     return;
   }, 1000);
 });
@@ -55,15 +55,15 @@ $('#resultSite').click(function() {
 $('#resultSite2').click(function() {
   selectText(this.id);
   document.execCommand('copy');
-  $('.siteRes').css('filter', 'blur(5px)');
+  $('.siteRes#resultSite2').css('filter', 'blur(5px)');
   $('.resultBlock .copied').css('opacity', '1');
   $('.resultBlock .copied').css('transform', 'scale(1)');
-  $('.siteRes').css('opacity', '0.55');
+  $('.siteRes#resultSite2').css('opacity', '0.55');
   setTimeout(function () {
     $('.resultBlock .copied').css('opacity', '');
     $('.resultBlock .copied').css('transform', 'scale(0.7)');
-    $('.siteRes').css('opacity', '');
-    $('.siteRes').css('filter', 'blur(0)');
+    $('.siteRes#resultSite2').css('opacity', '');
+    $('.siteRes#resultSite2').css('filter', 'blur(0)');
     return;
   }, 1000);
 });
@@ -108,6 +108,19 @@ $('#ucozPg3').click(function() {
 $('.wixPnl').click(function() {
   window.open('https://wix.com');
 });
+
+/*$(document).ready(function(){
+  $('.modal').modal({
+    inDuration: 600,
+    outDuration: 400
+  });
+});
+
+$('html').contextmenu(function() {
+  $('#connect').modal('open');
+  $('.container').css('filter', 'blur(10px)');
+  return false;
+});*/
 
 $(window).on('scroll', function() {
   if ($(window).scrollTop()) {
