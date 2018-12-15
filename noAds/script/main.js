@@ -89,12 +89,20 @@ $('#wixPg2').click(function() {
   location.href = 'removewix';
 });
 
+$('#wixPg3').click(function() {
+  location.href = '../removewix';
+});
+
 $('#ucozPg').click(function() {
   location.href = 'removeucoz';
 });
 
 $('#ucozPg2').click(function() {
   location.href = 'removeucoz';
+});
+
+$('#ucozPg3').click(function() {
+  location.href = '../removeucoz';
 });
 
 $('.wixPnl').click(function() {
