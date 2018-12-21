@@ -4806,6 +4806,10 @@ small {
   width: 470px;
 }
 
+.photoView.vertical2 img {
+  width: 620px;
+}
+
 .prevPhoto {
   position: fixed;
   margin-top: -20px;
