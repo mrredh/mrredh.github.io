@@ -58,6 +58,21 @@
         $('#photo-6').click(function() {
           location.href = '../&file!photo=6';
         });
+        
+        $(document).keydown(function(e){
+          if (e.keyCode == 27) {
+            $('.photoView').css('animation', 'photoViewOut 0.6s ease');
+            setTimeout(function() {
+              location.href = '../';
+            }, 420);
+          }
+          else if (e.keyCode == 39) {
+            $('.photoView').css('animation', 'photoViewOut 0.6s ease');
+            setTimeout(function() {
+              location.href = '../&file!photo=2';
+            }, 420);
+          }
+        });
       </script>
     </body>
   </html>
