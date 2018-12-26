@@ -5,7 +5,7 @@
       <link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
       <link type="text/css" rel="stylesheet" href="../../css/materialize.css"  media="screen,projection">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Упс/Фото 6 - Mr RED Hoibin</title>
+      <title>Упс/6 - Mr RED Hoibin</title>
     </head>
     <body>
       <div class="navbar-fixed">
@@ -64,6 +64,27 @@
         });
         $('#photo-8').click(function() {
           location.href = '../&file!photo=8';
+        });
+        
+        $(document).keydown(function(e){
+          if (e.keyCode == 27) {
+            $('.photoView').css('animation', 'photoViewOut 0.6s ease');
+            setTimeout(function() {
+              location.href = '../';
+            }, 420);
+          }
+          else if (e.keyCode == 37) {
+            $('.photoView').css('animation', 'photoViewOut 0.6s ease');
+            setTimeout(function() {
+              location.href = '../&file!photo=5';
+            }, 420);
+          }
+          else if (e.keyCode == 39) {
+            $('.photoView').css('animation', 'photoViewOut 0.6s ease');
+            setTimeout(function() {
+              location.href = '../&file!photo=7';
+            }, 420);
+          }
         });
       </script>
     </body>
