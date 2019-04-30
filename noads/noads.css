@@ -111,6 +111,10 @@ ntvk {
   	z-index: -2;
 }
 
+table {
+	display: none;
+}
+
 table[style="padding:0;margin:0;"] {
 	display: none;
 }
