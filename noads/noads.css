@@ -110,3 +110,8 @@ ntvk {
 	opacity: 0;
   	z-index: -2;
 }
+
+.u_preroll_videoadbetnet {
+	visibility: hidden;
+	z-index: -2;
+}
