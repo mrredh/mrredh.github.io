@@ -86,11 +86,11 @@ $('#wixPg').click(function() {
 });
 
 $('#wixPg2').click(function() {
-  location.href = 'removewix';
+  location.href = '../removewix';
 });
 
 $('#wixPg3').click(function() {
-  location.href = 'removewix';
+  location.href = '../removewix';
 });
 
 $('#ucozPg').click(function() {
@@ -98,11 +98,11 @@ $('#ucozPg').click(function() {
 });
 
 $('#ucozPg2').click(function() {
-  location.href = 'removeucoz';
+  location.href = '../removeucoz';
 });
 
 $('#ucozPg3').click(function() {
-  location.href = 'removeucoz';
+  location.href = '../removeucoz';
 });
 
 /*$(document).ready(function(){
