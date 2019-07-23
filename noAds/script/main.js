@@ -11,7 +11,7 @@ $('.sitesForm').submit(function () {
     $('.tPreloader').css('display', 'block');
   }
   var curPos=$(document).scrollTop();
-  var height = 450;
+  var height = 420;
   $("body,html").animate({"scrollTop":height}, 2000);
   return false;
 });
@@ -78,35 +78,31 @@ $('.resultUcoz').submit(function() {
 
 
 $('#homePg').click(function() {
-  location.href = '../';
+  location.href = 'index.html';
 });
 
 $('#wixPg').click(function() {
-  location.href = 'removewix';
+  location.href = 'noadswix.html';
 });
 
 $('#wixPg2').click(function() {
-  location.href = 'removewix';
+  location.href = 'noadswix.html';
 });
 
 $('#wixPg3').click(function() {
-  location.href = '../removewix';
+  location.href = 'noadswix.html';
 });
 
 $('#ucozPg').click(function() {
-  location.href = 'removeucoz';
+  location.href = 'noadsucoz.html';
 });
 
 $('#ucozPg2').click(function() {
-  location.href = 'removeucoz';
+  location.href = 'noadsucoz.html';
 });
 
 $('#ucozPg3').click(function() {
-  location.href = '../removeucoz';
-});
-
-$('.wixPnl').click(function() {
-  window.open('https://wix.com');
+  location.href = 'noadsucoz.html';
 });
 
 /*$(document).ready(function(){
