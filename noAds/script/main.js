@@ -78,7 +78,7 @@ $('.resultUcoz').submit(function() {
 
 
 $('#homePg').click(function() {
-  location.href = '/';
+  location.href = 'https://mrredh.github.io/noAds';
 });
 
 $('#wixPg').click(function() {
