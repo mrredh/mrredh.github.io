@@ -78,31 +78,31 @@ $('.resultUcoz').submit(function() {
 
 
 $('#homePg').click(function() {
-  location.href = 'index.html';
+  location.href = '/';
 });
 
 $('#wixPg').click(function() {
-  location.href = 'noadswix.html';
+  location.href = 'noadswix';
 });
 
 $('#wixPg2').click(function() {
-  location.href = 'noadswix.html';
+  location.href = 'noadswix';
 });
 
 $('#wixPg3').click(function() {
-  location.href = 'noadswix.html';
+  location.href = 'noadswix';
 });
 
 $('#ucozPg').click(function() {
-  location.href = 'noadsucoz.html';
+  location.href = 'noadsucoz';
 });
 
 $('#ucozPg2').click(function() {
-  location.href = 'noadsucoz.html';
+  location.href = 'noadsucoz';
 });
 
 $('#ucozPg3').click(function() {
-  location.href = 'noadsucoz.html';
+  location.href = 'noadsucoz';
 });
 
 /*$(document).ready(function(){
