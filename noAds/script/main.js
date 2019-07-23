@@ -82,27 +82,27 @@ $('#homePg').click(function() {
 });
 
 $('#wixPg').click(function() {
-  location.href = 'noadswix';
+  location.href = 'removewix';
 });
 
 $('#wixPg2').click(function() {
-  location.href = 'noadswix';
+  location.href = 'removewix';
 });
 
 $('#wixPg3').click(function() {
-  location.href = 'noadswix';
+  location.href = 'removewix';
 });
 
 $('#ucozPg').click(function() {
-  location.href = 'noadsucoz';
+  location.href = 'removeucoz';
 });
 
 $('#ucozPg2').click(function() {
-  location.href = 'noadsucoz';
+  location.href = 'removeucoz';
 });
 
 $('#ucozPg3').click(function() {
-  location.href = 'noadsucoz';
+  location.href = 'removeucoz';
 });
 
 /*$(document).ready(function(){
