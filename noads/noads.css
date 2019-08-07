@@ -125,7 +125,13 @@ table[style="padding:0;margin:0;"] {
 }
 
 div[style="text-align: center; overflow:hidden;"] {
+	position: absolute;
 	display: none;
+	visibility: hidden;
+	z-index: -20;
 }
 
-
+div[style="position: fixed; z-index: 999999; width: 400px; height: 308px; right: 5px; bottom: 5px;"] {
+	display: none;
+	visibility: hidden;
+}
