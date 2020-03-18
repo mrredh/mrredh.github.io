@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta name="viewport" content="width=device-width">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+  <title></title>
+  <script src="https://use.fontawesome.com/be0a9f2a58.js"></script>
+</head>
+<style type="text/css">
+  
+  @keyframes anone {
+    0% {
+      opacity: 0;
+      right: 100%;
+      transform: scale(0.7);
+    } 
+    100% {
+      opacity: 1;
+      right: 0;
+      transform: scale(1);
+    }
+  }
+  @keyframes antwo {
+    0% {
+      opacity: 0;
+      right: 100%;
+      transform: scale(0.7);
+    } 
+    100% {
+      opacity: 1;
+      right: 0;
+      transform: scale(1);
+    }
+  }
+  @keyframes anthree {
+    0% {
+      opacity: 0;
+      right: 100%;
+      transform: scale(0.7);
+    } 
+    100% {
+      opacity: 1;
+      right: 0;
+      transform: scale(1);
+    }
+  }
+
+  .an1 {
+    animation: anone 1.4s normal forwards;
+  }
+
+  .an2 {
+    animation: antwo 1.4s normal forwards;
+  }
+
+  .an3 {
+    animation: anthree 1.4s normal forwards;
+  }
+
+
+
+
+</style>
+<body>
+  
+<div class="animated">
+  <div class="row">
+    <div class="col l4 m6 s12">
+      <div class="an1 card">
+        <div class="card-image">
+          <img class="materialboxed" src="images/thtest2.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="col l4 m6 s12">
+      <div class="an2 card">
+        <div class="card-image">
+          <img class="materialboxed" src="images/thtest.jpg">
+        </div>
+      </div>
+    </div>
+    <div class="col l4 m12 s12">
+      <div class="an3 card">
+        <div class="card-image">
+          <img class="materialboxed" src="images/fl.jpg">
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Modal Trigger -->
+  <a class="waves-effect waves-light btn modal-trigger" href="#modal1">Modal</a>
+
+  <!-- Modal Structure -->
+  <div id="modal1" class="modal bottom-sheet">
+    <div class="modal-content">
+      
+    </div>
+    <div class="modal-footer">
+      <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+    </div>
+  </div>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    // the "href" attribute of the modal trigger must specify the modal ID that wants to be triggered
+    $('.modal').modal();
+  });
+</script>
+</body>
+</html>

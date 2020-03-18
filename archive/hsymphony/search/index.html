@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../styles/style.css">
+	<title>Симфония Праздника</title>
+</head>
+<body>
+
+<!--<div class="prel">
+  <div class="progress">
+      <div class="indeterminate"></div>
+  </div>
+</div>-->
+
+	<div class="navbar-fixed">
+	 <nav>
+      <div class="nav-wrapper">
+       <div class="container">
+        <a href="#" class="brand-logo">Симфония Праздника</a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down">
+          <li><a href="../index.html">Главная</a></li>
+          <li><a href="../photo.html">Фото</a></li>
+          <li><a href="../video.html">Видео</a></li>
+          <li>
+  	 	  <a class="dropdown-button" href="#" data-activates="all">Ещё <i class="fa fa-angle-down" aria-hidden="true"></i></a>
+  	 	  <ul id="all" class="dropdown-content">
+  	 	    <li><a href="../price.html">Прайс</a></li>
+  	 	    <li class="divider"></li>
+  	 	    <li><a href="../contacts.html">Контакты</a></li>
+  	 	    <li><a href="../about.html">О нас</a></li>
+  	 	  </ul>
+          </li>
+          <li class="active"><a href="#"><i class="material-icons">search</i></a></li>
+        </ul>
+  		<a href="#" data-activates="slide-out" class="menubtn button-collapse right waves-effect"><i class="material-icons">menu</i></a>
+       </div>
+      </div>
+  	 </nav>
+  	</div>
+  	<ul id="slide-out" class="side-nav">
+      <li class="active"><a href="../index.html">Главная</a></li>
+      <li><a href="../photo.html">Фото</a></li>
+      <li><a href="../video.html">Видео</a></li>
+      <li>
+  	  <a class="dropdown-button" href="#" data-activates="allmobile">Ещё <i class="fa fa-angle-down right" aria-hidden="true"></i></a>
+  	  <ul id="allmobile" class="dropdown-content">
+  	    <li><a href="../price.html">Прайс</a></li>
+  	    <li class="divider"></li>
+  	    <li><a href="../contacts.html">Контакты</a></li>
+  	    <li><a href="../about.html">О нас</a></li>
+  	  </ul>
+      </li>
+  	</ul>
+
+  	<div class="container">
+  	  <h2 class="head2">Поиск по сайту</h2><hr style="width: 22%; float: left; border: 0.8px solid #eee;"><br>
+
+      <div class="row">
+				<form>
+			    <div class="input-field col s10">
+			      <input id="sr" type="text" name="searchsite" class="validate" onkeyup="search();" autocomplete="off">
+			      <label for="sr">Поиск</label>
+			    </div>
+			    <div class="col s2">
+			      <input type="button" class="btn waves-effect grey-text" onclick="check(this.form);" value="Найти">
+			    </div>
+			  </form>
+			 <!--<form>
+        <div class="input-field col s10">
+          <input id="sr" type="text" name="searchforsite" class="validate" onkeyup="search();" autocomplete="off">
+          <label for="sr">Поиск</label>
+        </div>
+        <div class="col s2">
+          <button type="submit" class="btn waves-effect grey-text" onclick="check(this.form);"><i class="material-icons">search</i></button>
+        </div>
+			</form>-->
+      </div>
+
+      <ul id="searchres">
+        <li><a class="btn-flat waves-effect waves-yellow" href="search=video.html">Видео</a></li>
+        <li><a class="btn-flat waves-effect waves-yellow" href="search=photo.html">Фото</a></li>
+      </ul>
+    </div>
+
+  <br><br><br><br>
+  <div class="container">
+    <br><hr style="border: 0.8px solid #eee;">
+    <p>Симфония праздника 2018</p>
+  </div>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+<script src="https://use.fontawesome.com/be0a9f2a58.js"></script>
+<script type="text/javascript">
+
+	/*searchsite.onkeyup = function (srchentr) {
+		if (srchentr.keyCode === 13) {
+			alert("");
+		}
+		// Отменяем действие браузера
+		return false;
+	}*/
+
+	function check(form) {
+	 if (form.searchsite.value == "Видео") {
+	   document.location.href = "search=video.html";
+	 }
+
+	 else if (form.searchsite.value == "видео") {
+	   document.location.href = "search=video.html";
+	 }
+
+	 // another video task check
+	 else if (form.searchsite.value == "виде") {
+	   document.location.href = "search-like=video.html";
+	 }
+
+	 else if (form.searchsite.value == "идео") {
+		document.location.href = "search-like=video.html";
+	 }
+
+	 else if (form.searchsite.value == "видно") {
+		document.location.href = "search-like=video.html";
+	 }
+	 // another video task check end
+
+	 else if (form.searchsite.value == "Фото") {
+	   document.location.href = "search=photo.html";
+	 }
+
+	 else if (form.searchsite.value == "фото") {
+	   document.location.href = "search=photo.html";
+	 }
+
+	 // another photo task check
+	 else if (form.searchsite.value == "фот") {
+	   document.location.href = "search-like=photo.html";
+	 }
+
+	 else if (form.searchsite.value == "ото") {
+		document.location.href = "search-like=photo.html";
+	 }
+	 // another photo task check end
+
+	 else {
+	   alert("Go away")
+	 }
+	}
+</script>
+</body>
+</html>

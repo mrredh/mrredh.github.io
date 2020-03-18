@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta name="viewport" content="width=device-width">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../styles/style.css">
+	<title>Фото - Симфония Праздника</title>
+	<script src="https://use.fontawesome.com/be0a9f2a58.js"></script>
+</head>
+<body>
+	<div class="navbar-fixed">
+	 <nav>
+      <div class="nav-wrapper">
+       <div class="container">
+        <a href="#" class="brand-logo center">Симфония Праздника</a>
+        <ul id="nav-mobile" class="left">
+          <li><a href="../photo.html"><i class="material-icons">arrow_back</i></a></li>
+        </ul>
+       </div>
+      </div>
+  	 </nav>
+   </div>
+
+	 <br>
+   <div class="carousel carousel-slider">
+    <a class="carousel-item" href="#!"><img src="../images/weddingphotos/190915(1).jpg"></a>
+    <a class="carousel-item" href="#!"><img src="../images/weddingphotos/190915(2th).jpg"></a>
+    <a class="carousel-item" href="#!"><img src="../images/weddingphotos/190915(3).jpg"></a>
+    <a class="carousel-item" href="#!"><img src="../images/weddingphotos/280417(1).jpg"></a>
+    <a class="carousel-item" href="#!"><img src="../images/weddingphotos/280417(2).jpg"></a>
+    <a class="carousel-item" href="#!"><img src="../images/weddingphotos/280417(3).jpg"></a>
+		<a class="carousel-item" href="#!"><img src="../images/weddingphotos/050817(1).jpg"></a>
+		<a class="carousel-item" href="#!"><img src="../images/weddingphotos/050817(2).jpg"></a>
+		<a class="carousel-item" href="#!"><img src="../images/weddingphotos/050817(3).jpg"></a>
+  </div>
+
+  <a href="#!" class="prev left waves-effect waves-light" onclick="$('.carousel').carousel('prev');"><i class="material-icons">chevron_left</i></a>
+  <a href="#!" class="next waves-effect waves-light" onclick="$('.carousel').carousel('next');"><i class="material-icons">chevron_right</i></a>
+
+
+
+  <div class="container">
+    <br><hr style="border: 0.8px solid #eee;">
+    <p>Симфония праздника 2018</p>
+  </div>
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+    $('.carousel.carousel-slider').carousel({fullWidth: true});
+		$('.carousel').carousel('set', 3);
+  });
+</script>
+</body>
+</html>
