@@ -141,6 +141,10 @@ div[style="position: fixed; z-index: 999999; width: 400px; height: 308px; right:
 	display: none;
 }
 
-iframe[style="border: none; width: 100%; display: block; height: 315px !important; max-height: 315px !important;"] {
-  	overflow: hidden;
+iframe[name] {
+    visibility: hidden;
+    position: absolute;
+    z-index: -999;
+    top: 0;
+    left: 0;
 }
