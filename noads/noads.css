@@ -135,3 +135,12 @@ div[style="position: fixed; z-index: 999999; width: 400px; height: 308px; right:
 	display: none;
 	visibility: hidden;
 }
+
+
+div[style="position: fixed; z-index: 999999; width: 400px; height: 308px; right: 5px; bottom: 5px;"] {
+	display: none;
+}
+
+iframe[style="border: none; width: 100%; display: block; height: 315px !important; max-height: 315px !important;"] {
+  	overflow: hidden;
+}
