@@ -2,6 +2,15 @@ body {
   background: #17181f;
 }
 
+p {
+  color: #ececec;
+}
+
+a {
+  color: #eee;
+}
+
+
 #page_header_cont .back {
   height: 50px;
   background: #131e2b;
@@ -14,7 +23,7 @@ body {
 }
 
 #page_layout {
-  margin-top: 10px;
+  margin-top: 20px;
 }
 
 
@@ -23,7 +32,44 @@ SIDE_BAR
 */
 
 #side_bar .left_icon {
-  filter: hue-rotate(120deg);
+  filter: hue-rotate(120deg) contrast(2) brightness(0.7);
+  transition: all 0.6s ease;
+}
+
+#side_bar .left_label {
+  color: #8b556b;
+}
+#side_bar .more_div {
+  color: #8b556b;
+}
+
+#side_bar ol li .left_row {
+  padding: 2px;
+  transition: all 0.4s ease;
+}
+
+#side_bar ol li .left_row:hover {
+  background: #101219;
+  border-radius: 20px;
+}
+
+.left_count_wrap {
+  margin: 2px 0 2px 2px;
+  padding: 7px 9px;
+  color: #17181f;
+  background: #8b556b;
+  font-weight: 600;
+  font-size: 11px;
+  height: 10px;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+
+#side_bar ol li .left_row:hover .left_count_wrap {
+  margin: 2.5px 9px 5px 0;
+  padding: 6px 6px;
+  background-color: transparent;
+  color: #b26984;
 }
 
 
@@ -49,4 +95,27 @@ div.submit_post_field~.placeholder .ph_input {
   border-radius: 8px;
   background-color: #181a23;
   box-shadow: 0 4px 22px rgba(0,0,0,0.4);
+}
+
+
+/*
+USER POSTS
+*/
+
+.wall_module .wall_posts.all>.all~.all, .wall_module .wall_posts.all>.all~.all_ads_promoted_post,
+.wall_module .wall_posts.all>.post:not(.unshown)~.post.unshown+.post:not(.unshown),
+.wall_module .wall_posts.own>.own~.own, .wall_module .wall_posts.own>.own~.own_ads_promoted_post,
+.wall_module .wall_posts.own>.post:not(.unshown)~.post.unshown+.post:not(.unshown),
+.wall_module .wall_posts.postponed>.postponed~.postponed, .wall_module .wall_posts.suggested>.suggest~.suggest,
+.wall_module .wall_posts_search>.post~.post {
+  border-radius: 12px;
+}
+
+.like_wrap {
+  padding: 0;
+}
+
+.like_cont {
+  padding: 12px 20px;
+  border-top: 1px solid #0e0f15;
 }
