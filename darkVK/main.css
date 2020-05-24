@@ -15,7 +15,7 @@ a {
   height: 50px;
   background: #131e2b;
   border-bottom: 0;
-  box-shadow: 0 4px 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 
 #page_header {
@@ -23,7 +23,7 @@ a {
 }
 
 #page_layout {
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 
@@ -54,7 +54,6 @@ SIDE_BAR
 }
 
 .left_count_wrap {
-  margin: 2px 0 2px 2px;
   padding: 7px 9px;
   color: #17181f;
   background: #8b556b;
@@ -77,7 +76,7 @@ SIDE_BAR
 USER PAGE
 */
 
-.page_name {
+.page_name, h1.page_name {
   color: #ececec;
 }
 
