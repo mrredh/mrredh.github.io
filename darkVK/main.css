@@ -10,5 +10,43 @@ body {
 }
 
 #page_header {
-  margin-top: 3px;
+  margin-top: 4px;
+}
+
+#page_layout {
+  margin-top: 10px;
+}
+
+
+/*
+SIDE_BAR
+*/
+
+#side_bar .left_icon {
+  filter: hue-rotate(120deg);
+}
+
+
+/*
+USER PAGE
+*/
+
+.page_name {
+  color: #ececec;
+}
+
+.module_header .header_top {
+  color: #ececec;
+}
+
+div.submit_post_field, div.submit_post_field[contenteditable=true],
+div.submit_post_field[contenteditable=true]~.placeholder .ph_input,
+div.submit_post_field~.placeholder .ph_input {
+  background-color: #181a23;
+}
+
+.page_block {
+  border-radius: 8px;
+  background-color: #181a23;
+  box-shadow: 0 4px 22px rgba(0,0,0,0.4);
 }
