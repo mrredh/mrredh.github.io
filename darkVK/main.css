@@ -1,0 +1,14 @@
+body {
+  background: #17181f;
+}
+
+#page_header_cont .back {
+  height: 50px;
+  background: #131e2b;
+  border-bottom: 0;
+  box-shadow: 0 4px 12px;
+}
+
+#page_header {
+  margin-top: 3px;
+}
