@@ -250,11 +250,16 @@ div.submit_post_field~.placeholder .ph_input {
 
 .nim-dialog .nim-dialog--name .nim-dialog--name-w {
   color: #ececec;
+  font-family: 'Poiret One', cursive;
 }
 
 .nim-dialog .nim-dialog--preview, .nim-dialog .nim-dialog--text-preview {
   color: #ccc;
   transition: all 0.6s ease;
+}
+
+.nim-dialog--inner-text {
+  font-family: 'Poiret One', cursive;
 }
 
 .nim-dialog.nim-dialog_classic.nim-dialog_unread-out .nim-dialog--inner-text,
@@ -277,7 +282,7 @@ div.submit_post_field~.placeholder .ph_input {
 
 .nim-dialog.nim-dialog_typing .nim-dialog--typing {
   color: #bbb;
-  text-decoration: line-through;
+  text-decoration: underline;
 }
 
 .nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered .nim-dialog--preview,
