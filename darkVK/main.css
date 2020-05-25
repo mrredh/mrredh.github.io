@@ -65,8 +65,8 @@ SIDE_BAR
 }
 
 #side_bar ol li .left_row:hover .left_count_wrap {
-  margin: 2.5px 9px 5px 0;
-  padding: 6px 6px;
+  /*margin: 2.5px 9px 5px 0;
+  padding: 6px 6px;*/
   background-color: transparent;
   color: #b26984;
 }
@@ -122,8 +122,26 @@ USER POSTS
 
 
 /*
-MESSAGES
+  MESSAGES
 */
+
+.ui_rmenu_item:hover, .ui_rmenu_subitem:hover, .ui_rmenu_item_sel, .ui_rmenu_item_sel:hover {
+  background-color: #131e2b;
+}
+
+.ui_rmenu_item, .ui_rmenu_subitem {
+  color: #ececec;
+  transition: all 0.6s ease;
+}
+
+.ui_rmenu_item_sel, .ui_rmenu_item_sel:hover {
+  color: #8b556b;
+}
+
+.ui_rmenu_sliding .ui_rmenu_slider {
+  background-color: #8b556b;
+}
+
 
 .im-page_classic.im-page .im-page--header {
   margin-left: 0;
@@ -133,6 +151,7 @@ MESSAGES
   border-right: 0;
   border-bottom: none;
   border-radius: 10px;
+  background-color: #181a23;
 }
 
 .im-page_classic.im-page .im-page--dialogs-search {
@@ -141,4 +160,85 @@ MESSAGES
 
 .im-page_classic.im-page .im-page--dialogs {
   border-radius: 10px;
+  background-color: #181a23;
+}
+
+.im-page_classic.im-page .im-page--dcontent {
+  background-color: #181a23;
+}
+
+.nim-dialog.nim-dialog_classic {
+  border-top: 2px solid #1f2731;
+  transition: all 0.4s ease;
+}
+
+.nim-dialog .nim-dialog--name .nim-dialog--name-w {
+  color: #ececec;
+}
+
+.nim-dialog .nim-dialog--preview, .nim-dialog .nim-dialog--text-preview {
+  color: #ccc;
+  transition: all 0.6s ease;
+}
+
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered .nim-dialog--preview,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered
+.nim-dialog--text-preview, .nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic .nim-dialog--preview,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic .nim-dialog--text-preview,
+.nim-dialog:not(.nim-dialog_deleted):hover .nim-dialog--preview, .nim-dialog:not(.nim-dialog_deleted):hover
+.nim-dialog--text-preview, .nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered .nim-dialog--preview>b,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic .nim-dialog--preview>b, .nim-dialog:not(.nim-dialog_deleted):hover
+.nim-dialog--preview>b {
+  color: #8b556b;
+}
+
+.nim-dialog .nim-dialog--preview-attach {
+  color: #9ab0c7;
+}
+
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic,
+.nim-dialog:not(.nim-dialog_deleted):hover {
+  background-color: #0d0f1b;
+}
+
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog.nim-dialog_classic.nim-dialog_unread, .nim-dialog:not(.nim-dialog_deleted).nim-dialog.nim-dialog_hovered, .nim-dialog:not(.nim-dialog_deleted).nim-dialog:hover,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered+.im-search-results-head,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered+.nim-dialog, .nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected+.im-search-results-head,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected+.nim-dialog,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic+.im-search-results-head,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic+.nim-dialog,
+.nim-dialog:not(.nim-dialog_deleted):hover+.im-search-results-head, .nim-dialog:not(.nim-dialog_deleted):hover+.nim-dialog {
+  border-top: 0;
+}
+
+.nim-dialog .nim-dialog--content {
+  border-top: 0;
+}
+
+.nim-dialog.nim-dialog_failed.nim-dialog_muted .nim-dialog--unread,
+.nim-dialog.nim-dialog_failed.nim-dialog_muted .nim-dialog--unread-badge_bomb,
+.nim-dialog.nim-dialog_unread.nim-dialog_muted .nim-dialog--unread,
+.nim-dialog.nim-dialog_unread.nim-dialog_muted .nim-dialog--unread-badge_bomb,
+.nim-dialog.nim-dialog_unread.nim-dialog_prep-injected.nim-dialog_muted .nim-dialog--unread,
+.nim-dialog.nim-dialog_unread.nim-dialog_prep-injected.nim-dialog_muted .nim-dialog--unread-badge_bomb {
+  background-color: #393c4c;
+}
+
+.nim-dialog.nim-dialog_failed .nim-dialog--unread,
+.nim-dialog.nim-dialog_unread .nim-dialog--unread, .nim-dialog.nim-dialog_unread.nim-dialog_prep-injected .nim-dialog--unread {
+  background-color: #8b556b;
+}
+
+
+.im-page .im-page--dialogs-footer.ui_grey_block {
+  background-color: #181a23;
+}
+
+.im-page_classic.im-page .im-page--dialogs-footer {
+  box-shadow: 0 0 0;
+}
+
+.im-page .im-page--dialogs-footer {
+  border-top: solid 4px #1f2731;
 }
