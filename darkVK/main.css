@@ -251,6 +251,7 @@ div.submit_post_field~.placeholder .ph_input {
 .nim-dialog .nim-dialog--name .nim-dialog--name-w {
   color: #ececec;
   font-family: 'Poiret One', cursive;
+  font-size: 19px;
 }
 
 .nim-dialog .nim-dialog--preview, .nim-dialog .nim-dialog--text-preview {
@@ -260,10 +261,12 @@ div.submit_post_field~.placeholder .ph_input {
 
 .nim-dialog--inner-text {
   font-family: 'Poiret One', cursive;
+  font-size: 17px;
 }
 
 .nim-dialog.nim-dialog_classic.nim-dialog_unread-out .nim-dialog--inner-text,
 .nim-dialog.nim-dialog_classic.nim-dialog_unread-out.nim-dialog_muted .nim-dialog--inner-text {
+  font-family: 'Poiret One', cursive;
   border-radius: 25px;
   background-color: #12131d;
   transition: all 0.4s ease;
@@ -277,11 +280,13 @@ div.submit_post_field~.placeholder .ph_input {
 .nim-dialog--inner-text, .nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted):hover.nim-dialog_unread-out .nim-dialog--inner-text,
 .nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted):hover.nim-dialog_unread-out.nim-dialog_muted .nim-dialog--inner-text {
   color: #8b556b;
+  font-family: 'Poiret One', cursive;
   background-color: #181a23;
 }
 
 .nim-dialog.nim-dialog_typing .nim-dialog--typing {
   color: #bbb;
+  font-family: 'Poiret One', cursive;
   text-decoration: underline;
 }
 
