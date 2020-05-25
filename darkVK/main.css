@@ -1,13 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@100;200;500;600&display=swap');
+
 body {
   background: #17181f;
 }
 
+h1, h2, h3, h4, h5 {
+  color: #eee;
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
 p {
   color: #ececec;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 a {
   color: #eee;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 
@@ -148,7 +157,7 @@ div.submit_post_field~.placeholder .ph_input {
 
 
 /*
-  MESSAGES
+  MESSAGES PAGE
 */
 
 .im-right-menu .ui_rmenu {
@@ -366,4 +375,23 @@ div.submit_post_field~.placeholder .ph_input {
 
 .im-page .im-page--dialogs-footer {
   border-top: solid 4px #1f2731;
+}
+
+
+
+/*
+  MESSAGES
+*/
+
+.im-page_classic.im-page .im-page--chat-body-wrap-inner {
+  background-color: #181a23;
+}
+
+.im-page .im-page--history-new-bar {
+  background-color: #181a23;
+}
+
+.im-page_classic .im-page--chat-header {
+  border: 1px solid #181a23;
+  background-color: #181a23;
 }
