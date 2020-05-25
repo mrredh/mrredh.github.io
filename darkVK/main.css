@@ -40,7 +40,7 @@ SIDE_BAR
   color: #8b556b;
 }
 #side_bar .more_div {
-  border: 1px solid #8b556b;
+  border-top: 1px solid #8b556b;
 }
 
 #side_bar ol li .left_row {
