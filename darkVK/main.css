@@ -138,6 +138,10 @@ USER POSTS
   color: #8b556b;
 }
 
+.ui_rmenu_item_sel, .ui_rmenu_item_sel:hover {
+  border-left: 2px solid #8b556b;
+}
+
 .ui_rmenu_sliding .ui_rmenu_slider {
   background-color: #8b556b;
 }
@@ -209,7 +213,7 @@ USER POSTS
 .nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic+.im-search-results-head,
 .nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic+.nim-dialog,
 .nim-dialog:not(.nim-dialog_deleted):hover+.im-search-results-head, .nim-dialog:not(.nim-dialog_deleted):hover+.nim-dialog {
-  border-top: 2px solid #eee;
+  border-top: 2px solid #1f2731;
 }
 
 .nim-dialog .nim-dialog--content {
