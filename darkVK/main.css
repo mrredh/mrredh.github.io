@@ -184,6 +184,18 @@ div.submit_post_field~.placeholder .ph_input {
   color: #ececec;
 }
 
+.im-right-menu .im-right-menu--close {
+  opacity: 0;
+  display: inline-block;
+  transform: rotate(60deg);
+  transition: all 0.4s ease;
+}
+
+.im-right-menu .ui_rmenu_item:hover .im-right-menu--close {
+  opacity: 1;
+  transform: rotate(0);
+}
+
 
 .im-page_classic.im-page .im-page--header {
   margin-left: 0;
