@@ -151,6 +151,10 @@ div.submit_post_field~.placeholder .ph_input {
   MESSAGES
 */
 
+.im-right-menu .ui_rmenu {
+  margin-top: 23px;
+}
+
 .ui_rmenu_item:hover, .ui_rmenu_subitem:hover, .ui_rmenu_item_sel, .ui_rmenu_item_sel:hover {
   background-color: #131e2b;
 }
@@ -170,6 +174,14 @@ div.submit_post_field~.placeholder .ph_input {
 
 .ui_rmenu_sliding .ui_rmenu_slider {
   background-color: #8b556b;
+}
+
+.ui_rmenu_sep {
+  border-top: 2px solid #1f2731;
+}
+
+.im-right-menu .im-right-menu--count {
+  color: #ececec;
 }
 
 
@@ -202,6 +214,10 @@ div.submit_post_field~.placeholder .ph_input {
   transition: all 0.4s ease;
 }
 
+.nim-dialog._im_dialog:hover .nim-dialog--photo {
+  transform: scale(1.05);
+}
+
 .nim-dialog .nim-dialog--name .nim-dialog--name-w {
   color: #ececec;
 }
@@ -209,6 +225,29 @@ div.submit_post_field~.placeholder .ph_input {
 .nim-dialog .nim-dialog--preview, .nim-dialog .nim-dialog--text-preview {
   color: #ccc;
   transition: all 0.6s ease;
+}
+
+.nim-dialog.nim-dialog_classic.nim-dialog_unread-out .nim-dialog--inner-text,
+.nim-dialog.nim-dialog_classic.nim-dialog_unread-out.nim-dialog_muted .nim-dialog--inner-text {
+  border-radius: 25px;
+  background-color: #12131d;
+  transition: all 0.4s ease;
+}
+
+.nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted).nim-dialog_hovered.nim-dialog_unread-out .nim-dialog--inner-text,
+.nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted).nim-dialog_hovered.nim-dialog_unread-out.nim-dialog_muted .nim-dialog--inner-text,
+.nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic.nim-dialog_unread-out
+.nim-dialog--inner-text,
+.nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic.nim-dialog_unread-out.nim-dialog_muted
+.nim-dialog--inner-text, .nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted):hover.nim-dialog_unread-out .nim-dialog--inner-text,
+.nim-dialog.nim-dialog_classic:not(.nim-dialog_deleted):hover.nim-dialog_unread-out.nim-dialog_muted .nim-dialog--inner-text {
+  color: #8b556b;
+  background-color: #181a23;
+}
+
+.nim-dialog.nim-dialog_typing .nim-dialog--typing {
+  color: #bbb;
+  text-decoration: line-through;
 }
 
 .nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered .nim-dialog--preview,
