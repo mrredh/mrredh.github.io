@@ -209,7 +209,7 @@ USER POSTS
 .nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic+.im-search-results-head,
 .nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic+.nim-dialog,
 .nim-dialog:not(.nim-dialog_deleted):hover+.im-search-results-head, .nim-dialog:not(.nim-dialog_deleted):hover+.nim-dialog {
-  border-top: 0;
+  border-top: 2px solid #eee;
 }
 
 .nim-dialog .nim-dialog--content {
@@ -228,6 +228,50 @@ USER POSTS
 .nim-dialog.nim-dialog_failed .nim-dialog--unread,
 .nim-dialog.nim-dialog_unread .nim-dialog--unread, .nim-dialog.nim-dialog_unread.nim-dialog_prep-injected .nim-dialog--unread {
   background-color: #8b556b;
+}
+
+.online.mobile:after {
+  border-color: #181a23;
+  background-color: #181a23;
+}
+
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered .nim-dialog--photo .online.mobile:after,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic .nim-dialog--photo .online.mobile:after,
+.nim-dialog:not(.nim-dialog_deleted):hover .nim-dialog--photo .online.mobile:after {
+  background-color: #0d0f1b;
+}
+
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog.nim-dialog_classic.nim-dialog_unread:before,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog.nim-dialog_hovered:before,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog:hover:before,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered+.im-search-results-head:before,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered+.nim-dialog:before,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected+.im-search-results-head:before,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected+.nim-dialog:before,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic+.im-search-results-head:before,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic+.nim-dialog:before,
+.nim-dialog:not(.nim-dialog_deleted):hover+.im-search-results-head:before,
+.nim-dialog:not(.nim-dialog_deleted):hover+.nim-dialog:before, .nim-dialog:not(.nim-dialog_deleted).nim-dialog.nim-dialog_classic.nim-dialog_unread
+.nim-dialog--content, .nim-dialog:not(.nim-dialog_deleted).nim-dialog.nim-dialog_classic.nim-dialog_unread .nim-dialog--photo,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog.nim-dialog_hovered .nim-dialog--content,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog.nim-dialog_hovered .nim-dialog--photo, .nim-dialog:not(.nim-dialog_deleted).nim-dialog:hover
+.nim-dialog--content, .nim-dialog:not(.nim-dialog_deleted).nim-dialog:hover .nim-dialog--photo,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered+.im-search-results-head .nim-dialog--content,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered+.im-search-results-head .nim-dialog--photo,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered+.nim-dialog .nim-dialog--content,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_hovered+.nim-dialog .nim-dialog--photo,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected+.im-search-results-head .nim-dialog--content,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected+.im-search-results-head .nim-dialog--photo,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected+.nim-dialog .nim-dialog--content,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_selected+.nim-dialog .nim-dialog--photo,
+.nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic+.im-search-results-head
+.nim-dialog--content, .nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic+.im-search-results-head
+.nim-dialog--photo, .nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic+.nim-dialog
+.nim-dialog--content, .nim-dialog:not(.nim-dialog_deleted).nim-dialog_unread.nim-dialog_classic+.nim-dialog
+.nim-dialog--photo, .nim-dialog:not(.nim-dialog_deleted):hover+.im-search-results-head .nim-dialog--content,
+.nim-dialog:not(.nim-dialog_deleted):hover+.im-search-results-head .nim-dialog--photo,
+.nim-dialog:not(.nim-dialog_deleted):hover+.nim-dialog .nim-dialog--content, .nim-dialog:not(.nim-dialog_deleted):hover+.nim-dialog .nim-dialog--photo {
+  margin-top: 0;
 }
 
 
