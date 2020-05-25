@@ -12,11 +12,13 @@ h1, h2, h3, h4, h5 {
 p {
   color: #ececec;
   font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 100;
 }
 
 a {
   color: #eee;
   font-family: 'Montserrat Alternates', sans-serif;
+  font-weight: 100;
 }
 
 
@@ -72,6 +74,7 @@ SIDE_BAR
 
 #side_bar .left_label {
   color: #8b556b;
+  font-weight: 600;
 }
 #side_bar .more_div {
   border-top: 1px solid #8b556b;
@@ -233,6 +236,10 @@ div.submit_post_field~.placeholder .ph_input {
 .nim-dialog.nim-dialog_classic {
   border-top: 2px solid #1f2731;
   transition: all 0.4s ease;
+}
+
+.nim-dialog--photo {
+  transition: all 0.6s ease;
 }
 
 .nim-dialog._im_dialog:hover .nim-dialog--photo {
