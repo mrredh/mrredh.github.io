@@ -40,7 +40,7 @@ SIDE_BAR
   color: #8b556b;
 }
 #side_bar .more_div {
-  color: #8b556b;
+  border: 1px solid #8b556b;
 }
 
 #side_bar ol li .left_row {
@@ -54,13 +54,13 @@ SIDE_BAR
 }
 
 .left_count_wrap {
-  padding: 7px 9px;
   color: #17181f;
   background: #8b556b;
+  /*padding: 7px 9px;
   font-weight: 600;
   font-size: 11px;
   height: 10px;
-  border-radius: 50%;
+  border-radius: 50%;*/
   transition: all 0.4s ease;
 }
 
@@ -117,4 +117,28 @@ USER POSTS
 .like_cont {
   padding: 12px 20px;
   border-top: 1px solid #0e0f15;
+}
+
+
+
+/*
+MESSAGES
+*/
+
+.im-page_classic.im-page .im-page--header {
+  margin-left: 0;
+  margin-top: -40px;
+  border-top: 0;
+  border-left: 0;
+  border-right: 0;
+  border-bottom: none;
+  border-radius: 10px;
+}
+
+.im-page_classic.im-page .im-page--dialogs-search {
+  box-shadow: 0 0 0;
+}
+
+.im-page_classic.im-page .im-page--dialogs {
+  border-radius: 10px;
 }
