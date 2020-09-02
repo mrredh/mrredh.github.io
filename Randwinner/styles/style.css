@@ -1,0 +1,420 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,200;0,300;1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@200;300;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poiret+One&display=swap');
+
+body {
+  background-color: #eee;
+}
+
+h4 {
+  margin: 25px;
+  text-align: center;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 75px;
+}
+
+#particles-js {
+  position: absolute;
+  width: 100%;
+  height: 90%;
+  z-index: -2;
+}
+
+#cpr {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  margin-left: -50px;
+  cursor: default;
+  user-select: none;
+}
+
+
+
+
+input.videoInp::placeholder {
+  text-align: center;
+  color: #263238;
+  font-size: 19px;
+  transition: all 0.4s ease;
+}
+
+input.videoInp:focus::placeholder {
+  color: transparent;
+}
+
+
+input.videoInp {
+  position: relative;
+  padding: 7px 15px;
+  margin-left: 0.5px;
+  width: 375px;
+  height: 64px;
+  color: #263238;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 22px;
+  outline: none;
+  border: 0;
+  background-color: #eee;
+  transition: all 0.4s ease;
+  border-radius: 50px;
+}
+.videoInp::selection {
+  color: #ebebeb;
+  background-color: #222;
+}
+
+.inputDiv {
+  position: relative;
+  overflow: hidden;
+  margin-left: 50px;
+  padding: 5px;
+  width: 386px;
+  height: 74px;
+  border-radius: 50px;
+  transition: all 0.4s ease;
+}
+
+.inputDiv::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #263238;
+  transition: all 0.2s ease;
+  z-index: -1;
+}
+
+.inputDiv::after {
+  content: '';
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(111,71,195);
+  background: linear-gradient(138deg, rgba(111,71,195,1) 0%, rgba(183,90,240,1) 100%);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+.inputDiv.border::after {
+  opacity: 1;
+}
+.inputDiv.border::before {
+  background-color: transparent;
+  transition: all 0.8s ease;
+}
+
+
+.inp {
+  display: block;
+  margin: 0 auto;
+  margin-top: 120px;
+  width: 500px;
+}
+
+.inp button {
+  position: relative;
+  margin: 5px;
+  border: 0;
+  border-radius: 50px;
+  transition: all 0.4s ease;
+  z-index: 0;
+}
+
+.inp button:focus {
+  background-color: #eee;
+}
+
+.inp .btnDiv i.active {
+  opacity: 0;
+  margin: 2px;
+  margin-top: 4px;
+  color: #263238;
+  background: rgb(111,71,195);
+  background: linear-gradient(153deg, rgba(111,71,195,1) 0%, rgba(183,90,240,1) 65%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 52px;
+  transition: all 0.8s ease;
+  pointer-events: none;
+}
+.inp .btnDiv.border i.active {
+  opacity: 1;
+  transition: all 0.4s ease;
+}
+
+.inp .btnDiv i.black {
+  position: absolute;
+  margin: 2px;
+  margin-top: 4px;
+  color: #263238;
+  font-size: 52px;
+  transition: all 0.4s ease;
+  pointer-events: none;
+}
+.inp .btnDiv.border i.black {
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.btnDiv {
+  position: relative;
+  opacity: 0;
+  overflow: hidden;
+  margin-left: -55px;
+  margin-top: 1px;
+  width: 78px;
+  height: 74px;
+  border-radius: 50px;
+  transform: scale(0.8);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.btnDiv button:active {
+  transform: scale(0.85);
+}
+
+.btnDiv::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: #263238;
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+.btnDiv.border::before {
+  background-color: transparent;
+  transition: all 0.8s ease;
+}
+
+.btnDiv::after {
+  content: '';
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgb(111,71,195);
+  background: linear-gradient(153deg, rgba(111,71,195,1) 0%, rgba(183,90,240,1) 65%);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+.btnDiv.border::after {
+  opacity: 1;
+}
+
+
+
+.comment {
+  position: relative;
+  display: block;
+  padding: 12px;
+  margin: 0 auto;
+  width: 500px;
+  overflow: hidden;
+  border-radius: 30px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.2);
+  transition: all 0.4s ease;
+  animation: commIn 0.8s ease forwards;
+}
+
+@keyframes commIn {
+  0% {
+    opacity: 0;
+    margin-top: 20px;
+  }
+  100% {
+    opacity: 1;
+    margin-top:;
+  }
+}
+
+.comment::before {
+  content: '';
+  position: absolute;
+  margin: -12px;
+  margin-left: -131px;
+  width: 100%;
+  height: 55px;
+  background: rgb(205,74,74);
+  background: linear-gradient(93deg, rgba(205,74,74,1) 21%, rgba(230,128,97,1) 100%);
+  z-index: -1;
+}
+
+.comment::after {
+  content: '';
+  position: absolute;
+  margin-left: -140px;
+  margin-top: -100%;
+  width: 500%;
+  height: 500%;
+  background-color: #fff;
+  z-index: -2;
+}
+
+.comment img {
+  float: left;
+  margin: 12px;
+  margin-top: 0px;
+  width: 95px;
+  height: 95px;
+  border: 4px solid #fff;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 11px rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+.comment .h5 {
+  margin-top: -5px;
+  width: auto;
+  color: #fff;
+  font-family: 'Poiret One', cursive;
+  font-size: 35px;
+  font-weight: 300;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.comment .h5::selection {
+  color: #222;
+  background-color: #eee;
+}
+
+.comment .p {
+  margin-top: 6px;
+  width: 75%;
+  color: #263238;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 20px;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  transition: all 0.4s ease;
+  resize: none;
+  cursor: pointer;
+}
+.comment .p::selection {
+  color: #ebebeb;
+  background-color: #222;
+}
+.comment .p::-webkit-scrollbar {
+  width: 0;
+}
+
+.comment .likes {
+  position: absolute;
+  margin-top: 5px;
+  margin-left: 290px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.comment .likes i {
+  pointer-events: none;
+}
+
+.comment .likes input {
+  padding: 0;
+  margin-left: -10px;
+  width: 50px;
+  font-family: 'Poiret One', cursive;
+  font-size: 20px;
+  font-weight: 300;
+  outline: 0;
+  border: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+.comment .likes input::selection {
+  color: #222;
+  background-color: #eee;
+}
+
+.reImg {
+  opacity: 0;
+  display: inline-block;
+  position: absolute;
+  left: 20%;
+  margin-left: -110px;
+  margin-top: -133px;
+  padding: 20px;
+  border-radius: 20px;
+  background-color: rgba(255,255,255,0.4);
+  backdrop-filter: blur(7px);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  transition: all 0.4s ease;
+  z-index: -2;
+}
+
+.reImg input {
+  float: left;
+  padding: 12px;
+  outline: 0;
+  color: #263238;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 17px;
+  border: 2px solid #263238;
+  background-color: #eee;
+  border-radius: 50px;
+}
+.reImg input::placeholder {
+  color: #263238;
+}
+.reImg input::selection {
+  color: #ebebeb;
+  background-color: #222;
+}
+
+.reImg #replace {
+  padding: 5px;
+  margin-left: 5px;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #263238;
+  background-color: #eee;
+  border-radius: 50%;
+  transition: all 0.4s ease;
+}
+.reImg #replace>i {
+  margin-top: 4px;
+}
+
+.reImg #replace:active {
+  transform: scale(0.88);
+}
+
+.reImg #selectComm {
+  display: block;
+  margin-top: 20px;
+  margin-left: -20px;
+  color: #263238;
+  font-family: 'Didact Gothic', sans-serif;
+  font-size: 17px;
+  cursor: pointer;
+  user-select: none;
+}
+
+.reImg #selectComm>i {
+  float: left;
+  margin-top: 1px;
+  margin-left: 50px;
+}
+
+.reImg .btnClose {
+  float: left;
+  margin-top: -12px;
+  margin-left: -12px;
+  color: #c74a49;
+  cursor: pointer;
+}
