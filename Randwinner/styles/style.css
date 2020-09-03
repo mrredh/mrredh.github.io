@@ -4,67 +4,75 @@
 
 body {
   background-color: #eee;
+  overflow-y: hidden;
 }
 
 h4 {
+  opacity: 0;
   margin: 25px;
   text-align: center;
   font-family: 'Montserrat Alternates', sans-serif;
   font-size: 75px;
+  user-select: none;
+  animation: h4In 0.8s ease 0.2s forwards;
+}
+
+@keyframes h4In {
+  0% {
+    opacity: 0;
+    margin-top: 200px;
+  }
+  100% {
+    opacity: 1;
+    margin-top:;
+  }
 }
 
 #particles-js {
+  opacity: 0;
   position: absolute;
   width: 100%;
   height: 90%;
+  animation: particlesIn 1.8s ease 0.6s forwards;
   z-index: -2;
 }
 
+@keyframes particlesIn {
+  0% {
+    opacity:;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
 #cpr {
+  opacity: 0;
   position: absolute;
   bottom: 20px;
   left: 50%;
-  margin-left: -50px;
+  margin-left: -55px;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  animation: cprIn 0.8s ease 1s forwards;
   cursor: default;
   user-select: none;
 }
 
-
-
-
-input.videoInp::placeholder {
-  text-align: center;
-  color: #263238;
-  font-size: 19px;
-  transition: all 0.4s ease;
-}
-
-input.videoInp:focus::placeholder {
-  color: transparent;
+@keyframes cprIn {
+  0% {
+    opacity:;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 
-input.videoInp {
-  position: relative;
-  padding: 7px 15px;
-  margin-left: 0.5px;
-  width: 375px;
-  height: 64px;
-  color: #263238;
-  font-family: 'Montserrat Alternates', sans-serif;
-  font-size: 22px;
-  outline: none;
-  border: 0;
-  background-color: #eee;
-  transition: all 0.4s ease;
-  border-radius: 50px;
-}
-.videoInp::selection {
-  color: #ebebeb;
-  background-color: #222;
-}
 
 .inputDiv {
+  opacity: 0;
   position: relative;
   overflow: hidden;
   margin-left: 50px;
@@ -73,6 +81,18 @@ input.videoInp {
   height: 74px;
   border-radius: 50px;
   transition: all 0.4s ease;
+  animation: inputIn 0.8s ease 0.4s forwards;
+}
+
+@keyframes inputIn {
+  0% {
+    opacity:;
+    margin-top: 50px;
+  }
+  100% {
+    opacity: 1;
+    margin-top:;
+  }
 }
 
 .inputDiv::before {
@@ -106,6 +126,36 @@ input.videoInp {
 .inputDiv.border::before {
   background-color: transparent;
   transition: all 0.8s ease;
+}
+
+input.videoInp {
+  position: relative;
+  padding: 7px 15px;
+  margin-left: 0.5px;
+  width: 375px;
+  height: 64px;
+  color: #263238;
+  font-family: 'Montserrat Alternates', sans-serif;
+  font-size: 22px;
+  outline: none;
+  border: 0;
+  background-color: #eee;
+  transition: all 0.4s ease;
+  border-radius: 50px;
+}
+.videoInp::selection {
+  color: #ebebeb;
+  background-color: #222;
+}
+input.videoInp::placeholder {
+  text-align: center;
+  color: #263238;
+  font-size: 19px;
+  transition: all 0.4s ease;
+}
+
+input.videoInp:focus::placeholder {
+  color: transparent;
 }
 
 
@@ -212,6 +262,40 @@ input.videoInp {
   opacity: 1;
 }
 
+@keyframes btnSlide {
+  0% {
+    opacity:;
+    margin-left:;
+    transform:;
+  }
+  50% {
+    margin-left: -5px;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    margin-left: -15px;
+    transform: scale(1);
+  }
+}
+
+@keyframes btnOutSlide {
+  0% {
+    opacity: 1;
+    margin-left: -15px;
+    transform: scale(1);
+  }
+  50% {
+    margin-left: -5px;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity:;
+    margin-left:;
+    transform:;
+  }
+}
+
 
 
 .comment {
@@ -224,13 +308,16 @@ input.videoInp {
   border-radius: 30px;
   box-shadow: 0 6px 24px rgba(0,0,0,0.2);
   transition: all 0.4s ease;
-  animation: commIn 0.8s ease forwards;
+  animation: commIn 0.5s ease forwards;
 }
 
 @keyframes commIn {
   0% {
     opacity: 0;
     margin-top: 20px;
+  }
+  50% {
+    margin-top: -10px;
   }
   100% {
     opacity: 1;
@@ -345,14 +432,14 @@ input.videoInp {
   opacity: 0;
   display: inline-block;
   position: absolute;
-  left: 20%;
-  margin-left: -110px;
-  margin-top: -133px;
+  top: 50%;
+  margin-left: 20px;
   padding: 20px;
   border-radius: 20px;
   background-color: rgba(255,255,255,0.4);
   backdrop-filter: blur(7px);
   box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  transform: translateY(-50%);
   transition: all 0.4s ease;
   z-index: -2;
 }
