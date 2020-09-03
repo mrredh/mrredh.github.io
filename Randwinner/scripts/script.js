@@ -54,7 +54,7 @@ $(document).ready(function() {
   $('body').on('click', '#profImg', function() {
     $('.reImg').css({
       'opacity': '1',
-      'margin-left': '-80px',
+      'margin-left': '50px',
       'z-index': '1',
     });
   });
@@ -103,22 +103,14 @@ $(document).ready(function() {
   $('.videoInp').keyup(function() {
     if ($('.videoInp').val() != '') {
       $('.inputDiv').css('margin-left', '10px');
-      $('.btnDiv').css({
-        'margin-left': '-15px',
-        'opacity': '1',
-        'transform': 'scale(1)',
-      });
+      $('.btnDiv').css('animation', 'btnSlide 0.5s ease forwards');
       setTimeout(function() {
         $('.btnDiv').css('z-index', '2');
       }, 700);
     }
     else {
       $('.inputDiv').css('margin-left', '');
-      $('.btnDiv').css({
-        'margin-left': '',
-        'opacity': '',
-        'transform': '',
-      });
+      $('.btnDiv').css('animation', 'btnOutSlide 0.5s ease forwards');
       setTimeout(function() {
         $('.btnDiv').css('z-index', '');
       }, 200);
