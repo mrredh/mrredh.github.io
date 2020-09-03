@@ -4280,10 +4280,10 @@ nav .brand-logo {
 }
 
 nav .brand-logo img {
-  border-radius: 40%;
-  width: 62px;
-  height: 62px;
   opacity: 0.8;
+  margin-top: 3px;
+  width: 55px;
+  border-radius: 40%;
   transition: all 0.4s;
 }
 
