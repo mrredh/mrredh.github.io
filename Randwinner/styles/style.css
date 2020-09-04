@@ -439,7 +439,7 @@ input.videoInp:focus::placeholder {
   background-color: rgba(255,255,255,0.4);
   backdrop-filter: blur(7px);
   box-shadow: 0 4px 24px rgba(0,0,0,0.2);
-  transform: translateY(-50%);
+  transform: translateY(-90%);
   transition: all 0.4s ease;
   z-index: -2;
 }
@@ -472,6 +472,7 @@ input.videoInp:focus::placeholder {
   background-color: #eee;
   border-radius: 50%;
   transition: all 0.4s ease;
+  user-select: none;
 }
 .reImg #replace>i {
   margin-top: 4px;
@@ -504,4 +505,5 @@ input.videoInp:focus::placeholder {
   margin-left: -12px;
   color: #c74a49;
   cursor: pointer;
+  user-select: none;
 }
