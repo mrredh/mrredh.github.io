@@ -4,7 +4,7 @@ $(document).ready(function() {
     var video = $('#videoId').val();
     var videoId = video.split('=')[1];
 
-    var api_key = "AIzaSyAvhl41PZNSvNZ8kdTzt6kMW8QbVI9co5Q";
+    var api_key = "AIzaSyB32XnA29u9yy2pF7HqQNkauc91QJlVrFw";
     var url = "https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&key=" + api_key + "&videoId=" + videoId;
     var result = "";
 
