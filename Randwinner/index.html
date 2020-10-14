@@ -5,39 +5,55 @@
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="styles/materialize.css">
     <link rel="stylesheet" href="styles/style.css">
-    <title>Выбор ауе победителя</title>
+    <title>Выбор победителя</title>
   </head>
   <body>
-    <div id="particles-js"></div>
-    <h4>Выбор ауе победителя</h4>
-    <div class="inp">
-      <form>
-        <div class="row">
-          <div class="col s10">
-            <div class="inputDiv">
-              <input type="text" class="videoInp" id="videoId" placeholder="Ссылка на видео" autocomplete="off">
+    <div class="content">
+      <div id="particles-js"></div>
+      <div class="block">
+        <h4>Выбор победителя</h4>
+        <div class="inp">
+          <form>
+            <div class="row inpC">
+              <div class="col s10">
+                <div class="inputDiv">
+                  <input type="text" class="videoInp" id="videoId" placeholder="Ссылка на видео" autocomplete="off">
+                  <div id="clearBtn"><i class="material-icons">clear</i></div>
+                </div>
+              </div>
+              <div class="col s2">
+                <div class="btnDiv">
+                  <button type="submit">
+                    <i class="material-icons black">casino</i>
+                    <i class="material-icons active">casino</i>
+                  </button>
+                </div>
+              </div>
             </div>
-          </div>
-          <div class="col s2">
-            <div class="btnDiv">
-              <button type="submit">
-                <i class="material-icons black">casino</i>
-                <i class="material-icons active">casino</i>
-              </button>
-            </div>
-          </div>
+          </form>
         </div>
-      </form>
-    </div>
-    <br>
-    <div id="results"></div>
-
-    <div class="reImg" id="reImg">
-      <a class="btnClose"><i class="material-icons">highlight_off</i></a><br>
-      <input type="text" placeholder="URL Картинки">
-      <button id="replace"><i class="material-icons">done_outline</i></button>
+      </div>
       <br>
-      <a id="selectComm"><i class="material-icons">comment</i> Выбрать из комментариев</a>
+      <div id="results"></div>
+
+      <div class="reImg" id="reImg">
+        <a class="btnClose"><i class="material-icons">highlight_off</i></a><br>
+        <input type="text" placeholder="URL Картинки">
+        <button id="replace"><i class="material-icons">done_outline</i></button>
+        <br>
+        <a id="selectComm"><i class="material-icons">comment</i> Выбрать из комментариев</a>
+      </div>
+    </div>
+
+
+    <span class="crclBtn" id="close"><i class="material-icons">close</i></span>
+    <span class="crclBtn" id="change_log"><i class="material-icons">receipt_long</i></span>
+
+    <div class="dialog" id="changeLg">
+      <h1>Список нововведений</h1>
+      <div id="changes"></div>
+      <h3>Баги и ошибки</h3>
+      <div id="bugs"></div>
     </div>
 
 
