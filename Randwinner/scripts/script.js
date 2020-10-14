@@ -2,7 +2,19 @@ $(document).ready(function() {
   $('form').submit(function(e) {
     e.preventDefault();
     var video = $('#videoId').val();
-    var videoId = video.split('=')[1];
+    if (video.indexOf('youtu.be') > -1) {
+      var videoId = video.split('/')[3];
+    }
+    else if (video.indexOf('youtube.com') > -1) {
+      var cutLnk = video.split('=')[1];
+      var videoId = cutLnk.split('&')[0];
+    }
+    else if (video == '') {
+      Materialize.toast('Отдай ссылку на видео', 4000);
+    }
+    else {
+      Materialize.toast('Чё за хуйня, этот ваш ' + video + '?!', 4000);
+    }
 
     var api_key = "AIzaSyB32XnA29u9yy2pF7HqQNkauc91QJlVrFw";
     var url = "https://www.googleapis.com/youtube/v3/commentThreads?part=snippet&key=" + api_key + "&videoId=" + videoId;
@@ -14,6 +26,7 @@ $(document).ready(function() {
     $.get(url, function(data) {
       var array = data.items;
       var rand = array[Math.floor(Math.random() * array.length)];
+      var date = rand.snippet.topLevelComment.snippet.publishedAt;
       result = `
           <div class="comment">
             <img src="${rand.snippet.topLevelComment.snippet.authorProfileImageUrl}" id="profImg">
@@ -27,6 +40,8 @@ $(document).ready(function() {
           </div>
       `;
       $('#results').append(result);
+      
+      //<input class="date" value="${date.replace(/-/g,".").replace(/T/g," в ")}">
 
 
       // Adaptive Textarea Height
@@ -42,6 +57,35 @@ $(document).ready(function() {
           this.style.height = this.scrollHeight + "px";
         }
       });
+
+
+      // Adaptive Comment Header
+      var h5 = $('.h5');
+      if (h5.val().length > 15) {
+        h5.css({
+          'margin-top': '0',
+          'margin-bottom': '5px',
+          'font-size': '25px',
+        });
+      };
+
+      h5.keyup(function() {
+        if (h5.val().length > 15) {
+          h5.css({
+            'margin-top': '0',
+            'margin-bottom': '5px',
+            'font-size': '25px',
+          });
+        }
+        else {
+          h5.css({
+            'margin-top': '',
+            'margin-bottom': '',
+            'font-size': '',
+          });
+        }
+      });
+
 
 
       // Log YouTube data
@@ -67,13 +111,20 @@ $(document).ready(function() {
   });
 
   $('#reImg #replace').click(function() {
-    var imgUrl = $('#reImg input').val();
-    $('.comment img').attr('src', imgUrl);
+    var imgUrl = $('#reImg input');
+    if (imgUrl.val() == '') {
+      Materialize.toast('Мне чё, из ануса аву достать?!', 4000);
+      $(imgUrl).css('animation', 'errInp 0.6s ease');
+      $(imgUrl).focus();
+    }
+    else {
+      var imgUrl = $('#reImg input').val();
+      $('.comment img').attr('src', imgUrl);
+    }
   });
 
   $('#selectComm').click(function() {
     var commUrl = $('#videoId').val();
-
     if (commUrl != '') {
       window.open(
         commUrl,
@@ -100,24 +151,130 @@ $(document).ready(function() {
     $('.inputDiv, .btnDiv').removeClass('border');
   });
 
-  $('.videoInp').keyup(function() {
+  $('#clearBtn').click(function() {
+    $('.videoInp').val('');
+    clsInp();
+  });
+
+  $('.videoInp').keyup(clsInp);
+
+  function clsInp() {
     if ($('.videoInp').val() != '') {
       $('.inputDiv').css('margin-left', '10px');
       $('.btnDiv').css('animation', 'btnSlide 0.5s ease forwards');
+      $('.block').css('margin-top', '-490px');
+      $('.inpC').css('margin-top', '5px');
+      $('#clearBtn').css({
+        'opacity': '1',
+        'z-index': '2',
+      });
+      $('#clearBtn>i').css({
+        'margin-left': '0',
+        'transform': 'rotate(0)',
+      });
       setTimeout(function() {
-        $('.btnDiv').css('z-index', '2');
+        $('.btnDiv, .btnDiv button').css('z-index', '2');
       }, 700);
     }
     else {
       $('.inputDiv').css('margin-left', '');
       $('.btnDiv').css('animation', 'btnOutSlide 0.5s ease forwards');
+      $('.block').css('margin-top', '');
+      $('.inpC').css('margin-top', '');
+      $('.comment').css('animation', 'commOut 0.4s ease');
+      $('#clearBtn').css({
+        'opacity': '',
+        'z-index': '',
+      });
+      $('#clearBtn>i').css({
+        'margin-left': '',
+        'transform': '',
+      });
       setTimeout(function() {
-        $('.btnDiv').css('z-index', '');
-      }, 200);
+        $('.btnDiv, .btnDiv button').css('z-index', '');
+        $('.comment').remove();
+      }, 400);
     }
+  }
+
+
+
+  // JSON
+  var changeLg = {
+    "change_log": [
+      {"change":
+        "1. Теперь поле ввода поддерживает ссылки любого вида, будь то сокращённые или любые другие. И не стоит пытайться достать комменты с порнхаба — вы будете посланы нахуй."
+      },
+      {"change":
+        "2. Улучшена адаптация под разное разрешение экрана или окна браузера"
+      },
+      {"change":
+        "3. Немнго подтянут UI"
+      },
+    ],
+    "bugs": [
+      {"bug":
+        "1. Яндекс хуеет от размытия и анимаций (проходит после нескольких перезагрузок). При использовании Гугла или других браузеров, на движке webkit, всё ок."
+      },
+      {"bug":
+        "2. При задрачивании кнопки обновления комментариев, включится защита от DDOS-атак, выползет ошибка Api и ничего работать больше нихуя не будет."
+      },
+    ]
+  };
+
+  $(changeLg.change_log).each(function(index, item) {
+    $('#changes').append('<p>' + item.change + '<p/>');
+  });
+  $(changeLg.bugs).each(function(index, item) {
+    $('#bugs').append('<p>' + item.bug + '</p>');
   });
 
 
+  // Dialog Windows
+  $('#close').click(function() {
+    $(this).css({
+      'animation': 'cBtnOut 0.4s ease forwards',
+      'z-index': '-4',
+    });
+    $('#change_log').css({
+      'animation': 'cBtnIn 0.4s ease forwards',
+      'z-index': '',
+    });
+    $('.content').css({
+      'filter': '',
+      'z-index': '',
+    });
+    $('.dialog#changeLg').css({
+      'opacity': '',
+      'margin-top': '',
+    });
+    setTimeout(function() {
+      $('.dialog').css('z-index', '');
+    }, 200);
+  });
+
+
+  $('#change_log').click(function() {
+    $(this).css({
+      'animation': 'cBtnOut 0.4s ease forwards',
+      'z-index': '-4',
+    });
+    $('#close').css({
+      'animation': 'cBtnIn 0.4s ease forwards',
+      'z-index': '4',
+    });
+    $('.dialog#changeLg').css('z-index', '5');
+    $('.content').css({
+      'filter': 'blur(5px)',
+      'z-index': '-1',
+    });
+    setTimeout(function() {
+      $('.dialog#changeLg').css({
+        'opacity': '1',
+        'margin-top': '-300px',
+      });
+    }, 200);
+  });
 });
 
 
@@ -233,4 +390,5 @@ particlesJS('particles-js', {
   "retina_detect": true
 });
 
-$('body').append('<p id="cpr" style="display:block">Made by <a target="_blank" href="https://youtube.com/MrREDHoibin">RedH</a></p>');
+console.log('Чё ты тут забыл? Не лезь, убъёт блядь!');
+$('.content').append('<p id="cpr" style="display:block">Made by <a target="_blank" href="https://youtube.com/MrREDHoibin">RedH</a></p>');
