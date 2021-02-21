@@ -33,8 +33,11 @@
         var resText = result[0].transcript;
         $('.msg').text(resText);
         $('.msgInp').val('');
-        if (resText == 'Привет') {
+        if (resText == 'привет') {
           alert('Здаров!');
+        }
+        else if (resText == 'как дела' || 'привет как дела') {
+          alert('Всё просто замечательно');
         }
       } else {
         $('.msgInp').val(result[0].transcript);
