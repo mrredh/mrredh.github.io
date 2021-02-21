@@ -19,7 +19,7 @@
   <input type="text" class="msgInp" placeholder="Напишите что-нибудь...">
   <button onclick="speech ()">Изложите ваши мысли</button>
 
-  
+
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <script>
     var recognizer = new webkitSpeechRecognition();
@@ -30,7 +30,12 @@
     recognizer.onresult = function (event) {
       var result = event.results[event.resultIndex];
       if (result.isFinal) {
-        $('.msg').text(result[0].transcript);
+        var resText = result[0].transcript;
+        $('.msg').text(resText);
+        $('.msgInp').val('');
+        if (resText == 'Привет') {
+          alert('Здаров!');
+        }
       } else {
         $('.msgInp').val(result[0].transcript);
         //console.log('Промежуточный результат: ', result[0].transcript);
