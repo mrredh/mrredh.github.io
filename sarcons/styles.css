@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100;200;300;600;700&family=Manrope:wght@200;300;500;700&display=swap');
+
+body {
+  background: rgb(241,241,241);
+  background: linear-gradient(163deg, rgba(241,241,241,1) 0%, rgba(255,255,255,1) 100%) fixed;
+}
+
+::selection {
+  background: #000;
+  color: #fff;
+}
+
+.parallax-container {
+  height: 600px;
+  background: rgba(68,10,79,0.8);
+  background: linear-gradient(124deg, rgba(68,10,79,0.8) 4%, rgba(106,36,54,0.8) 100%);
+  user-select: none;
+}
+
+/* .parallax-container .logoPrl > img {
+  margin-top: 125px;
+  height: 250px;
+  width: 250px;
+} */
+
+#logoPrl {
+  margin-top: 125px;
+  width: 240px;
+}
+
+#logoPrl .st0{fill:#ffffff;}
+#logoPrl .st1{font-family:'Impact';}
+#logoPrl .st2{font-size:30px;}
+
+.parallax-container h1 {
+  margin-top: -20px;
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 200;
+  letter-spacing: 10px;
+}
+
+.parallax-container p {
+  color: #fefefe;
+  font-family: 'Manrope', sans-serif;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.parallax-container.page {
+  height: 450px;
+}
+
+.parallax-container.page h1 {
+  margin-top: 150px;
+}
+
+h2 {
+  color: #252525;
+  font-family: 'Commissioner', sans-serif;
+  font-size: 50px;
+  font-weight: 600;
+}
+
+p {
+  color: #252525;
+  font-family: 'Commissioner', sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+}
+
+hr {
+  width: 75%;
+  border: 1px solid #eee;
+}
+
+iframe {
+  border-radius: 10px;
+}
+
+nav {
+  overflow: hidden;
+  background: rgba(0,0,0,0);
+  box-shadow: 0 0 0;
+  transition: all 0.4s ease;
+}
+
+ nav::after {
+  opacity: 0;
+  content: '';
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 200px;
+  background: rgba(68,10,79,0.8);
+  background: linear-gradient(124deg, rgba(68,10,79,0.8) 4%, rgba(106,36,54,0.8) 100%);
+  transition: all 0.4s ease;
+  z-index: -999;
+}
+
+.scrolled nav {
+  backdrop-filter: blur(10px);
+}
+
+.scrolled nav::after {
+ opacity: 1;
+}
+
+.scrolled .butn {
+  background-color: rgba(255,255,255,0.45);
+}
+
+nav .brand-logo {
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+.navbar-fixed {
+  margin-bottom: -64px;
+}
+
+.nav-wrapper {
+  box-shadow: 0 0 0;
+  transition: all 0.05s;
+}
+
+.pagename {
+  opacity: 0;
+  user-select: none;
+  transition: all 0.4s;
+}
+
+
+.butn {
+  margin: 7px;
+  padding: 6px 12px 6px 12px;
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  border-radius: 15px;
+  background-color: rgba(255,255,255,0.35);
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.butn:active {
+  transform: scale(0.95);
+}
+
+.butn img {
+  float: left;
+  margin-right: 5px;
+  height: 24px;
+  pointer-events: none;
+}
+
+
+.close {
+  opacity: 0;
+  margin-top: 20px;
+  margin-right: 20px;
+  transition: all 0.4s ease;
+  animation: anIn 0.4s ease forwards;
+  cursor: pointer;
+  user-select: none;
+}
+
+.close:active {
+  transform: scale(0.85);
+}
+
+.close span {
+  color: #c0c0c0;
+  font-size: 50px;
+}
+
+@keyframes anIn {
+  0% {
+    opacity:;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+
+select {
+  margin: 7px;
+  padding: 6px 12px 6px 12px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Manrope', sans-serif;
+  font-size: 19px;
+  font-weight: 400;
+  border: 0;
+  border-radius: 15px;
+  background-color: rgba(255,255,255,0.35);
+  backdrop-filter: blur(10px);
+  transition: all 0.2s ease;
+  user-select: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+select:focus {
+  outline: 0;
+  border: 0;
+  border-radius: 15px;
+}
+
+
+.transit {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgb(241,241,241);
+  background: linear-gradient(163deg, rgba(241,241,241,1) 0%, rgba(255,255,255,1) 100%) fixed;
+  animation: transit 0.8s ease;
+  animation: transitOut 1.2s ease;
+  z-index: 999;
+}
+
+@keyframes transit {
+  0% {
+    opacity: 0;
+    left: 50%;
+    top: 50%;
+    width: 5%;
+    height: 5%;
+    border-radius: 50px;
+  }
+  100% {
+    opacity: 1;
+    left:;
+    top:;
+    width:;
+    height:;
+    border-radius: 0px;
+  }
+}
+
+@keyframes transitOut {
+  0% {
+    opacity:;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+
+.orderPage h1 {
+  opacity: 0;
+  margin-top: 150px;
+  animation: animIn 0.8s ease 0.4s forwards;
+}
+
+.orderPage p {
+  opacity: 0;
+  margin-top: 150px;
+  animation: animIn 1s ease 0.4s forwards;
+}
+
+@keyframes animIn {
+  0% {
+    opacity:;
+    margin-top:;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+
+
+.card {
+  border-radius: 10px;
+  box-shadow: 0 0 0px rgba(0,0,0,0);
+  transition: all 0.4s ease;
+  cursor: default;
+}
+
+.card:hover {
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.card .card-image img {
+  border-radius: 10px;
+  pointer-events: none;
+  user-select: none;
+  filter: brightness(0.9);
+  transition: all 0.3s ease;
+}
+
+.card:hover .card-image img {
+  filter: brightness(0.6);
+}
+
+span.card-title {
+  color: #fff;
+  font-family: 'Manrope', sans-serif;
+  font-weight: 700;
+  text-shadow: 0 5px 35px rgba(0,0,0,1);
+  cursor: pointer;
+}
+
+.card .card-title {
+  font-size: 35px;
+}
+
+.page-footer {
+  padding: 22px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 19px;
+  font-weight: 300;
+  background: rgb(27,27,27);
+  background: linear-gradient(163deg, rgba(27,27,27,1) 28%, rgba(37,37,37,1) 100%);
+}
