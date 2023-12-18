@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="ru-RU">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="../materialize.css">
+    <link rel="stylesheet" href="../style.css">
+    <title>Народное исполнительство - SARCONS</title>
+  </head>
+  <body>
+    <div class="navbar-fixed">
+      <nav>
+        <div class="nav-wrapper">
+          <ul id="nav-mobile" class="left hide-on-med-and-down">
+            <button class="butn" id="back_b"><img src="../img/arrow-back.svg">К списку услуг</button>
+          </ul>
+          <a class="brand-logo center pagename">Народное исполнительство</a>
+          <ul id="nav-mobile" class="right hide-on-med-and-down">
+            <button href="#" class="butn" id="vk_b"><img src="../img/vk.svg">ВКонтакте</button>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="parallax-container page">
+      <div class="parallax"><img src="img/bg.png"></div>
+      <h1 class="center">Народное исполнительство</h1>
+      <p class="center">72 часа — 4 000 руб ⠀|⠀ 36 часов — 3 000 руб.</p>
+      <div class="center">
+        <button id="order" class="butn">Записаться</button>
+      </div>
+    </div>
+    <br>
+    <div class="block1">
+      <div class="container">
+        <h2 class="center" style="font-size:40px">Совершенствование профессиональных компетенций преподавателей, реализующих образовательные программы в области народного песенного и инструментального исполнительства</h2>
+        <hr>
+        <br><br>
+        <p><b>Цель программы:</b> обновление профессиональных компетенций преподавателей в области музыкальной педагогики, традиционного народного песенного и инструментального исполнительства<br>
+        <b>Категория слушателей:</b> преподаватели образовательных организаций сферы культуры
+        </p>
+        <p>
+          <b>Краткое содержание программы:</b><br>
+          ⦿	Теоретические и практические основы Саратовской народно-певческой школы, опирающейся на научно-творческую концепцию Л.Л. Христиансена <br>
+          ⦿	Практические вопросы развития навыков многоголосного пения и работы над элементами вокальной техники в классе ансамбля<br>
+          ⦿	Стилевые и жанровые особенности региональных певческих и инструментальных традиций<br>
+          ⦿	Основы традиционной хореографии и сценизации аутентичного танца<br>
+        </p>
+        <p>
+          <b>Результат освоения программы:</b><br>
+          ⦿	Освоение практических навыков работы в классе сольного, ансамблевого и хорового народного пения<br>
+          ⦿	Актуализация знаний в области стилевых особенностей интерпретации и сценического воплощения музыкального фольклора различных регионов России<br>
+        </p>
+      </div>
+    </div>
+    <div class="block2">
+      <div class="carousel">
+        <a class="carousel-item"><img src="img/1.png"></a>
+        <a class="carousel-item"><img src="img/2.png"></a>
+        <a class="carousel-item"><img src="img/3.png"></a>
+        <a class="carousel-item"><img src="img/4.png"></a>
+        <a class="carousel-item"><img src="img/5.png"></a>
+      </div>
+    </div>
+
+
+    <footer class="page-footer">
+      <br>
+      <div class="container">
+        © 2023 Центр непрерывного образования Саратовской Государственной Консерватории им. Л.В. Собинова.
+      </div>
+      <br>
+    </footer>
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+    <script type="text/javascript" src="../script.js"></script>
+    <script>
+      $(document).ready(function(){
+        $('.parallax').parallax();
+        $('.carousel').carousel();
+        $('.materialboxed').materialbox();
+      });
+
+      $('#back_b').click(function() {
+        location.href = '../index.html';
+      });
+
+      $('#vk_b').click(function() {
+        location.href = 'https://vk.com/center_noipk';
+      });
+    </script>
+  </body>
+</html>
