@@ -202,3 +202,11 @@ $('#orderForm').click(function() {
 $('a.close').click(function() {
   location.href = '../fortepiano/index.html';
 });
+
+$('#downloadFiz').click(function() {
+  location.href = 'files/Для_физических_лиц.zip'
+});
+
+$('#downloadYur').click(function() {
+  location.href = 'files/Для_юридических_лиц.zip'
+});

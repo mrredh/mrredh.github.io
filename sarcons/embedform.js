@@ -19,6 +19,7 @@
                 // Устанавливаем высоту в зависимости от значения height
                 if (height < 300) {
                     iframe.style.height = (height - 250) + 'px';
+                    console.log(height);
                 } else {
                     // Отнимаем 50px от высоты
                     iframe.style.height = (height - 50) + 'px';

@@ -405,13 +405,13 @@ select:focus {
 .fixedMenu {
   opacity: 0;
   position: fixed;
-  padding: 12px;
+  padding: 20px;
   width: 22%;
   top: 50px;
   left: 2%;
   background-color: #fff;
+  border: 1px solid #e0e0e0;
   border-radius: 20px;
-  box-shadow: 0 4px 22px rgba(0,0,0,0.2);
   transform: translate(0, 40px);
   transition: all 0.4s ease;
   z-index: -1;
@@ -729,7 +729,8 @@ td, th {
 
 .tabs .tab a:hover, .tabs .tab a.active {
   background-color: transparent;
-  color: #722481;
+  color: #252525;
+  /*color: #722481;*/
 }
 
 .tabs .tab.disabled a,
@@ -742,7 +743,7 @@ td, th {
   position: absolute;
   bottom: 0;
   height: 2px;
-  background-color: #722481;
+  background-color: #252525;
   will-change: left, right;
 }
 
