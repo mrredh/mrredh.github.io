@@ -19,7 +19,7 @@
           <a href="#ordForm">1. Заполнить электронную форму заявки</a><br>
           <a href="#ordDoc">2. Заполнение документов</a><br>
             <a href="#ordDocManual" style="margin-left:15px">‣ Ознакомится с инструкцией</a><br>
-            <a href="#ordDocDownload" style="margin-left:15px">‏‣ Скачать и заполнить пакет документов (для физических или юридических лиц)</a><br>
+            <a href="#ordDocDownload" style="margin-left:15px">‏‣ Скачать и заполнить пакет документов</a><br>
           <a href="#ordSend">3. Отправить пакет документов на электронную почту Центра</a>
         </div>
         <br><hr><br>
@@ -31,7 +31,7 @@
             <a href="#ordForm">1. Заполнить электронную форму заявки</a><br>
             <a href="#ordDoc">2. Заполнение документов</a><br>
               <a href="#ordDocManual" style="margin-left:15px">‣ Ознакомится с инструкцией</a><br>
-              <a href="#ordDocDownload" style="margin-left:15px">‏‣ Скачать и заполнить пакет документов (для физических или юридических лиц)</a><br>
+              <a href="#ordDocDownload" style="margin-left:15px">‏‣ Скачать и заполнить пакет документов</a><br>
             <a href="#ordSend">3. Отправить пакет документов на электронную почту Центра</a>
           </div>
         </div>
@@ -39,86 +39,92 @@
           <h4 id="ordForm">1. Заполните электронную форму заявки</h4>
           <script src="../embedform.js"></script>
           <div class="center">
-            <iframe src="https://forms.yandex.ru/u/627c9bbd400994416fd6eb11/?iframe=1" frameborder="0" name="ya-form-627c9bbd400994416fd6eb11" width="720"></iframe>
+            <iframe src="https://forms.yandex.ru/u/65835c8290fa7b39c59f80c6/?iframe=1" frameborder="0" name="ya-form-65835c8290fa7b39c59f80c6" width="720"></iframe>
           </div>
           <br>
           <h4 id="ordDoc">2. Заполнение документов</h4>
-          <p id="ordDocManual">Ознакомьтесь с <a href="#!">инструкцией</a></p>
+          <p id="ordDocManual">Ознакомьтесь с <a href="https://drive.google.com/file/d/1WZff9ZZlPmwKwOS-CyOBetHEFQex3IH5/view?usp=drive_link" target="_blank">инструкцией</a></p>
           <p id="ordDocDownload">Скачайте и заполните пакет документов (для физических или юридических лиц)</p>
           <ul class="collection with-header">
-            <li class="collection-header"><span class="collection-heading">Перечень документов</span><button id="download" class="butn dflt">Скачать всё <span class="material-symbols-outlined right" style="margin-left:4px;">download_for_offline</span></button></li>
+            <li class="collection-header">
+              <span class="collection-heading">Необходимые документы</span>
+              <button id="downloadFiz" class="butn dflt dFiz">Скачать всё <span class="material-symbols-outlined right" style="margin-left:4px;">download_for_offline</span></button>
+              <button id="downloadYur" class="butn dflt dYur">Скачать всё <span class="material-symbols-outlined right" style="margin-left:4px;">download_for_offline</span></button>
+            </li>
             <div class="row">
               <ul class="tabs">
                 <li class="tab col s6"><a class="active" href="#fiz">Для физических лиц</a></li>
                 <li class="tab col s6"><a href="#yur">Для юридических лиц</a></li>
               </ul>
+              <div class="col s12">
+                <li class="collection-item avatar">
+                  <img src="../img/doc_icons/перечень.png">
+                  <a href="https://drive.google.com/file/d/1Rvs_6kOp_l4x416jcTF8yY46bNs3qLvv/view?usp=drive_link" class="title" target="_blank">Перечень программ</a>
+                  <a href="https://drive.google.com/uc?export=download&id=1Rvs_6kOp_l4x416jcTF8yY46bNs3qLvv" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                </li>
+              </div>
               <div id="fiz" class="col s12">
                 <li class="collection-item avatar">
                   <img src="../img/doc_icons/договор.png">
                   <a href="#!" class="title">Договор</a>
-                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                  <a href="#!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
                 </li>
                 <li class="collection-item avatar">
                   <img src="../img/doc_icons/отправка_удостоверения.png">
                   <a href="#!" class="title">Заявление на отправку удостоверения</a>
-                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                  <a href="#!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
                 </li>
                 <li class="collection-item avatar">
                   <img src="../img/doc_icons/заявление.png">
                   <a href="#!" class="title">Заявление</a>
-                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                  <a href="#!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
                 </li>
                 <li class="collection-item avatar">
                   <img src="../img/doc_icons/обработка_пд.png">
                   <a href="#!" class="title">Согласие на обработку персональных данных</a>
-                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                  <a href="#!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
                 </li>
                 <li class="collection-item avatar">
                   <img src="../img/doc_icons/распространение_пд.png">
                   <a href="#!" class="title">Согласие на распространение персональных данных</a>
-                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                  <a href="#!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
                 </li>
               </div>
               <div id="yur" class="col s12">
                 <li class="collection-item avatar">
                   <img src="../img/doc_icons/договор.png">
                   <a href="#!" class="title">Договор</a>
-                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                  <a href="#!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
                 </li>
                 <li class="collection-item avatar">
                   <img src="../img/doc_icons/отправка_удостоверения.png">
                   <a href="#!" class="title">Заявление на отправку удостоверения</a>
-                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                  <a href="#!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
                 </li>
                 <li class="collection-item avatar">
                   <img src="../img/doc_icons/заявление.png">
                   <a href="#!" class="title">Заявление</a>
-                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                  <a href="#!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
                 </li>
                 <li class="collection-item avatar">
                   <img src="../img/doc_icons/обработка_пд.png">
                   <a href="#!" class="title">Согласие на обработку персональных данных</a>
-                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                  <a href="#!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
                 </li>
                 <li class="collection-item avatar">
                   <img src="../img/doc_icons/распространение_пд.png">
                   <a href="#!" class="title">Согласие на распространение персональных данных</a>
-                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                  <a href="#!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
                 </li>
               </div>
             </div>
           </ul>
-
           <br>
           <h4 id="ordSend">3. Отправка документов</h4>
-          <p>Отправьте пакет документов на электронную почту Центра <a href="mailto">resyrs-centrsgk@sarcons.ru</a>. Тема письма: «Платное обучение»</p>
+          <p>Отправьте пакет документов на электронную почту Центра <a href="mailto:resyrs-centrsgk@sarcons.ru">resyrs-centrsgk@sarcons.ru</a>. Тема письма: «Платное обучение»</p>
           <br><br><br><br><br><br><br><br>
         </div>
       </div>
-
-
-
-
     </div>
 
 
@@ -128,7 +134,18 @@
     <script type="text/javascript">
       $(document).ready(function(){
         $('ul.tabs').tabs({
-          swipeable: true
+          swipeable: true,
+          onShow: function (tab) {
+            var selTab = tab[0].id;
+            if (selTab == 'fiz') {
+              $('button#downloadYur').css('display','none');
+              $('button#downloadFiz').css('display','block');
+            }
+            if (selTab == 'yur') {
+              $('button#downloadFiz').css('display','none');
+              $('button#downloadYur').css('display','block');
+            }
+          }
         });
       });
     </script>
