@@ -27,6 +27,8 @@ $(document).ready(function () {
   }, 1450);
 
 
+  $('.collapsible.destroy').collapsible('destroy');
+
   // Анимации карточек
 
   /*$(window).scroll(function() {
@@ -54,6 +56,7 @@ $(document).ready(function () {
   }, 1100);*/
 
 
+  // Появление меню при пролистывании
   // Функция для обновления высоты при изменении размера окна
   function updateParallaxHeight() {
     var parallaxHeight = $('.parallax-container').outerHeight();
@@ -78,7 +81,8 @@ $(document).ready(function () {
         'opacity': '1',
         'transform': 'translate(0, 0)'
       });
-    } else {
+    }
+    else {
       $('.navbar-fixed').removeClass('scrolled');
       $('.navbar-fixed .pagename').css({
         'opacity': '0',
@@ -94,6 +98,43 @@ $(document).ready(function () {
   // Пересчитываем высоту при изменении размера окна
   $(window).resize(function () {
     updateParallaxHeight();
+  });
+
+
+  // Появление списка при пролистывании (страница записи)
+  function updateMenuHeight() {
+    var menuHeight = $('.orderMenu').outerHeight();
+    $(window).data('menuHeight', menuHeight - 30);
+  }
+
+  updateMenuHeight();
+
+  $(window).bind('scroll', function () {
+    var menuHeight = $(window).data('menuHeight');
+    var scrollPosition = $(window).scrollTop();
+
+    if (scrollPosition > menuHeight) {
+      $('.fixedMenu').css('z-index','999');
+      setTimeout(function() {
+        $('.fixedMenu').css({
+          'opacity':'1',
+          'transform':'translate(0, 0)'
+        });
+      }, 10);
+    }
+    else {
+      $('.fixedMenu').css('z-index','-1');
+      setTimeout(function() {
+        $('.fixedMenu').css({
+          'opacity':'0',
+          'transform':'translate(0, 40px)'
+        });
+      }, 10);
+    }
+  });
+
+  $(window).resize(function () {
+    updateMenuHeight();
   });
 });
 

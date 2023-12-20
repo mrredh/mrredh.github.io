@@ -16,8 +16,13 @@
             var iframe;
 
             if (height && (iframe = findIframe(e.source))) {
-                // Отнимаем 50px от высоты
-                iframe.style.height = (height - 50) + 'px';
+                // Устанавливаем высоту в зависимости от значения height
+                if (height < 300) {
+                    iframe.style.height = (height - 250) + 'px';
+                } else {
+                    // Отнимаем 50px от высоты
+                    iframe.style.height = (height - 50) + 'px';
+                }
             }
         } catch (err) {
             // Обработка ошибок, если не удается распарсить JSON
