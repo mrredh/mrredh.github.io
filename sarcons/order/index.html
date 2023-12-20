@@ -3,31 +3,134 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,700,0,200"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="../materialize.css">
     <link rel="stylesheet" href="../style.css">
     <title>Записаться - SARCONS</title>
   </head>
   <body style="background:#fff">
     <!--<a class="right close"><span class="material-symbols-rounded">close</span></a>-->
-    <div class="container orderPage">
-      <br><br>
-      <h1>Запись на программу</h1>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-      Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-      voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-      anim id est laborum.</p>
-      <br>
-
-      <script src="../embedform.js"></script>
-      <div class="center">
-        <iframe src="https://forms.yandex.ru/u/627c9bbd400994416fd6eb11/?iframe=1" frameborder="0" name="ya-form-627c9bbd400994416fd6eb11" width="720"></iframe>
+    <div class="orderPage container">
+      <div class="orderMenu">
+        <h1>Запись на программу</h1>
+        <!--<p>Для записи на обучение вам необходимо заполнить электронную форму заявки и прислать пакет документов на эл. почту resyrs-centrsgk@sarcons.ru с темой письма «Платное обучение»</p>-->
+        <div class="enrollList">
+          <p>Для записи на обучение вам необходимо:</p>
+          <a href="#ordForm">1. Заполнить электронную форму заявки</a><br>
+          <a href="#ordDoc">2. Заполнение документов</a><br>
+            <a href="#ordDocManual" style="margin-left:15px">‣ Ознакомится с инструкцией</a><br>
+            <a href="#ordDocDownload" style="margin-left:15px">‏‣ Скачать и заполнить пакет документов (для физических или юредических лиц)</a><br>
+          <a href="#ordSend">3. Отправить пакет документов на электронную почту Центра</a>
+        </div>
+        <br><hr><br>
       </div>
+      <div class="row">
+        <div class="col s2">
+          <div class="fixedMenu">
+            <p>Для записи на обучение вам необходимо:</p>
+            <a href="#ordForm">1. Заполнить электронную форму заявки</a><br>
+            <a href="#ordDoc">2. Заполнение документов</a><br>
+              <a href="#ordDocManual" style="margin-left:15px">‣ Ознакомится с инструкцией</a><br>
+              <a href="#ordDocDownload" style="margin-left:15px">‏‣ Скачать и заполнить пакет документов (для физических или юредических лиц)</a><br>
+            <a href="#ordSend">3. Отправить пакет документов на электронную почту Центра</a>
+          </div>
+        </div>
+        <div class="col s10">
+          <h4 id="ordForm">1. Заполните электронную форму заявки</h4>
+          <script src="../embedform.js"></script>
+          <div class="center">
+            <iframe src="https://forms.yandex.ru/u/627c9bbd400994416fd6eb11/?iframe=1" frameborder="0" name="ya-form-627c9bbd400994416fd6eb11" width="720"></iframe>
+          </div>
+          <br>
+          <h4 id="ordDoc">2. Заполнение документов</h4>
+          <p id="ordDocManual">Ознакомьтесь с <a href="#!">инструкцией</a></p>
+          <p id="ordDocDownload">Скачайте и заполните пакет документов (для физических или юредических лиц)</p>
+          <ul class="collection with-header">
+            <li class="collection-header"><span class="collection-heading">Перечень документов</span><button id="download" class="butn dflt">Скачать всё <span class="material-symbols-outlined right" style="margin-left:4px;">download_for_offline</span></button></li>
+            <div class="row">
+              <ul class="tabs">
+                <li class="tab col s6"><a class="active" href="#fiz">Для физических лиц</a></li>
+                <li class="tab col s6"><a href="#yur">Для юридических лиц</a></li>
+              </ul>
+              <div id="fiz" class="col s12">
+                <li class="collection-item avatar">
+                  <img src="../img/doc_icons/договор.png">
+                  <a href="#!" class="title">Договор</a>
+                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                </li>
+                <li class="collection-item avatar">
+                  <img src="../img/doc_icons/отправка_удостоверения.png">
+                  <a href="#!" class="title">Заявление на отправку удостоверения</a>
+                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                </li>
+                <li class="collection-item avatar">
+                  <img src="../img/doc_icons/заявление.png">
+                  <a href="#!" class="title">Заявление</a>
+                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                </li>
+                <li class="collection-item avatar">
+                  <img src="../img/doc_icons/обработка_пд.png">
+                  <a href="#!" class="title">Согласие на обработку персональных данных</a>
+                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                </li>
+                <li class="collection-item avatar">
+                  <img src="../img/doc_icons/распространение_пд.png">
+                  <a href="#!" class="title">Согласие на распространение персональных данных</a>
+                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                </li>
+              </div>
+              <div id="yur" class="col s12">
+                <li class="collection-item avatar">
+                  <img src="../img/doc_icons/договор.png">
+                  <a href="#!" class="title">Договор</a>
+                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                </li>
+                <li class="collection-item avatar">
+                  <img src="../img/doc_icons/отправка_удостоверения.png">
+                  <a href="#!" class="title">Заявление на отправку удостоверения</a>
+                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                </li>
+                <li class="collection-item avatar">
+                  <img src="../img/doc_icons/заявление.png">
+                  <a href="#!" class="title">Заявление</a>
+                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                </li>
+                <li class="collection-item avatar">
+                  <img src="../img/doc_icons/обработка_пд.png">
+                  <a href="#!" class="title">Согласие на обработку персональных данных</a>
+                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                </li>
+                <li class="collection-item avatar">
+                  <img src="../img/doc_icons/распространение_пд.png">
+                  <a href="#!" class="title">Согласие на распространение персональных данных</a>
+                  <a href="#!!" class="secondary-content"><span class="material-symbols-outlined">download_for_offline</span></a>
+                </li>
+              </div>
+            </div>
+          </ul>
+
+          <br>
+          <h4 id="ordSend">3. Отправка документов</h4>
+          <p>Отправьте пакет документов на электронную почту Центра <a href="mailto">resyrs-centrsgk@sarcons.ru</a>. Тема письма: «ПЛАТНОЕ ОБУЧЕНИЕ»</p>
+          <br><br><br><br><br><br><br><br>
+        </div>
+      </div>
+
+
+
+
     </div>
 
 
     <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
     <script type="text/javascript" src="../script.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('ul.tabs').tabs({
+          swipeable: true
+        });
+      });
+    </script>
   </body>
 </html>
