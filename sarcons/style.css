@@ -652,12 +652,25 @@ td, th {
 .collection .collection-item.avatar img {
   width: 50px;
   height: 50px;
+  user-select: none;
+  pointer-events: none;
 }
 
 .collection .secondary-content>span {
   margin-top: 7px;
   color: #252525;
   font-size: 35px;
+  transition: all 0.4s ease;
+  user-select: none;
+}
+
+.collection .secondary-content>span:hover {
+  color: #5b5b5b;
+}
+
+.collection .secondary-content>span:active {
+  transform: scale(0.9);
+
 }
 
 
