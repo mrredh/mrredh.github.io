@@ -22,14 +22,12 @@ body::-webkit-scrollbar {
 
 .parallax-container {
   height: 600px;
-  background: rgba(68,10,79,0.8);
-  background: linear-gradient(124deg, rgba(68,10,79,0.8) 4%, rgba(106,36,54,0.8) 100%);
+  /*background: rgba(68,10,79,0.8);
+  background: linear-gradient(124deg, rgba(68,10,79,0.8) 4%, rgba(106,36,54,0.8) 100%);*/
+  background: rgb(85,14,99);
+  background: linear-gradient(90deg, rgba(77,00,93,0.8) 0%, rgba(159,39,39,0.8) 100%);
   user-select: none;
   transition: all 0.7s ease;
-}
-
-.parallax-container.loaded {
-
 }
 
 /* .parallax-container .logoPrl > img {
@@ -171,8 +169,8 @@ nav {
   left: 0;
   width: 100%;
   height: 200px;
-  background: rgba(68,10,79,0.8);
-  background: linear-gradient(124deg, rgba(68,10,79,0.8) 4%, rgba(106,36,54,0.8) 100%);
+  background: rgb(85,14,99);
+  background: linear-gradient(90deg, rgba(85,14,99,0.8) 0%, rgba(158,63,54,0.8) 100%);
   transition: all 0.4s ease;
   z-index: -999;
 }
@@ -505,6 +503,18 @@ select:focus {
   display: none;
   will-change: opacity;
 }
+
+.modal::-webkit-scrollbar {
+  width: 6px;
+}
+.modal::-webkit-scrollbar-track {
+  background: transparent;
+}
+.modal::-webkit-scrollbar-thumb {
+  background-color: #252525;
+  border-radius: 10px;
+}
+
 
 #materialbox-overlay {
   position: fixed;
