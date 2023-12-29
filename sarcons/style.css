@@ -68,7 +68,6 @@ body::-webkit-scrollbar {
   width: 300px;
   transform: translate(1px, 0);
   filter: invert(100%);
-  pointer-events: none;
   transition: all 0.8s ease;
 }
 
