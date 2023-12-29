@@ -27,7 +27,6 @@ body::-webkit-scrollbar {
   background: rgb(85,14,99);
   background: linear-gradient(90deg, rgba(77,00,93,0.8) 0%, rgba(159,39,39,0.8) 100%);
   user-select: none;
-  pointer-events: none;
   transition: all 0.7s ease;
 }
 
@@ -67,6 +66,7 @@ body::-webkit-scrollbar {
   margin-top: 100px;
   width: 300px;
   transform: translate(1px, 0);
+  pointer-events: none;
   filter: invert(100%);
   transition: all 0.8s ease;
 }
