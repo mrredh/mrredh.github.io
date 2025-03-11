@@ -72,7 +72,7 @@ button {
 .button.large {
   padding: 22px 42px;
   font-size: 26px;
-  border: 4px solid #fda001;
+/*   border: 4px solid #fda001; */
 }
 
 .button.iconBtn {
