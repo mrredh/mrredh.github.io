@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="_Слой_2" data-name="Слой 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 995.13 995.13">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: url(#_Безымянный_градиент_135-4);
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-3, .cls-4, .cls-5 {
+        stroke: #656565;
+        stroke-width: 6px;
+      }
+
+      .cls-2 {
+        fill: none;
+        stroke: #ff7550;
+        stroke-width: 12px;
+      }
+
+      .cls-6 {
+        fill: url(#_Безымянный_градиент_158-3);
+      }
+
+      .cls-7 {
+        fill: url(#_Безымянный_градиент_158);
+      }
+
+      .cls-3 {
+        fill: url(#_Безымянный_градиент_135-3);
+      }
+
+      .cls-8 {
+        fill: url(#_Безымянный_градиент_158-2);
+      }
+
+      .cls-4 {
+        fill: url(#_Безымянный_градиент_135);
+      }
+
+      .cls-5 {
+        fill: url(#_Безымянный_градиент_135-2);
+      }
+    </style>
+    <linearGradient id="_Безымянный_градиент_158" data-name="Безымянный градиент 158" x1="276.9" y1="374.27" x2="411.65" y2="239.51" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#d71847"/>
+      <stop offset="1" stop-color="#eb6f7a"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_158-2" data-name="Безымянный градиент 158" x1="198.96" y1="434.86" x2="333.71" y2="300.11" xlink:href="#_Безымянный_градиент_158"/>
+    <linearGradient id="_Безымянный_градиент_158-3" data-name="Безымянный градиент 158" x1="355.31" y1="440.33" x2="490.07" y2="305.57" xlink:href="#_Безымянный_градиент_158"/>
+    <linearGradient id="_Безымянный_градиент_135" data-name="Безымянный градиент 135" x1="277.86" y1="220.56" x2="705.41" y2="648.11" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#ffe081"/>
+      <stop offset="1" stop-color="#ffefcf"/>
+    </linearGradient>
+    <linearGradient id="_Безымянный_градиент_135-2" data-name="Безымянный градиент 135" x1="317.93" y1="343.73" x2="745.48" y2="771.28" xlink:href="#_Безымянный_градиент_135"/>
+    <linearGradient id="_Безымянный_градиент_135-3" data-name="Безымянный градиент 135" x1="276.51" y1="467.24" x2="704.06" y2="894.79" xlink:href="#_Безымянный_градиент_135"/>
+    <linearGradient id="_Безымянный_градиент_135-4" data-name="Безымянный градиент 135" x1="276.58" y1="590.4" x2="704.13" y2="1017.96" xlink:href="#_Безымянный_градиент_135"/>
+  </defs>
+  <rect class="cls-2" x="72.69" y="409.39" width="804.12" height="123.09" rx="61.54" ry="61.54"/>
+  <rect class="cls-2" x="112.76" y="534.56" width="804.12" height="123.09" rx="61.54" ry="61.54"/>
+  <rect class="cls-2" x="71.35" y="658.06" width="804.12" height="123.09" rx="61.54" ry="61.54"/>
+  <rect class="cls-2" x="71.42" y="781.23" width="804.12" height="123.09" rx="61.54" ry="61.54"/>
+  <circle class="cls-7" cx="344.27" cy="306.89" r="95.29"/>
+  <circle class="cls-8" cx="266.33" cy="367.49" r="95.29"/>
+  <circle class="cls-6" cx="422.69" cy="372.95" r="95.29"/>
+  <rect class="cls-4" x="89.58" y="372.79" width="804.12" height="123.09" rx="61.54" ry="61.54"/>
+  <rect class="cls-5" x="129.65" y="495.96" width="804.12" height="123.09" rx="61.54" ry="61.54"/>
+  <rect class="cls-3" x="88.23" y="619.47" width="804.12" height="123.09" rx="61.54" ry="61.54"/>
+  <rect class="cls-1" x="88.3" y="742.63" width="804.12" height="123.09" rx="61.54" ry="61.54"/>
+</svg>
