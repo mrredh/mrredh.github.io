@@ -185,7 +185,7 @@ header .content .heading h1 {
 header .content .heading img {
   opacity: 0.3;
   position: absolute;
-  left: 5%;
+  left: 3%;
   bottom: 1%;
   width: 90%;
   user-select: none;
